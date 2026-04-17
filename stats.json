@@ -1,9 +1,9 @@
 {
   "repo": "bible-ux",
-  "version": "1.3.0-unreleased",
+  "version": "1.4.0-unreleased",
   "last_updated": "2026-04-17",
   "phase": "STABLE",
-  "total_files": 32,
+  "total_files": 36,
   "content_lines": 47021,
   "content_files": {
     "WEB.md": 15669,
@@ -23,13 +23,16 @@
     "stats.json": "self"
   },
   "prompts": {
-    "count": 10,
-    "total_lines": 5323,
+    "count": 13,
+    "total_lines": 6251,
     "files": {
-      "PROMPT_MASTER.md": 136,
+      "PROMPT_MASTER.md": 139,
       "PROMPT_DESIGN_AUDIT.md": 935,
       "PROMPT_CSSFIX.md": 106,
       "PROMPT_TOKENS_EXPORT.md": 835,
+      "PROMPT_PICK_PATTERN.md": 179,
+      "PROMPT_SPEC_FROM_SCRATCH.md": 246,
+      "PROMPT_CODE_REVIEW.md": 208,
       "PROMPT_REPRISE.md": 268,
       "PROMPT_TEST_CREATIF.md": 48,
       "PROMPT_INTEGRATION_DEEP_RESEARCH.md": 167,
@@ -37,7 +40,8 @@
       "PROMPT_DEEP_RESEARCH_WEARABLE.md": 1073,
       "PROMPT_DEEP_RESEARCH_XR.md": 1011
     },
-    "router": "prompts/README.md"
+    "router": "prompts/README.md",
+    "vision": "prompts/VISION.md"
   },
   "sources": {
     "count": 7,

@@ -5,12 +5,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
-## [Unreleased] — Tokens export + XR bible + prompts routing + cleanup
+## [Unreleased] — Prompt system v1.4 (pick-pattern, spec, code-review, vision) + tokens export + XR bible + routing + cleanup
+
+### Added — 3 new workflow prompts + vision document
+- **`prompts/PROMPT_PICK_PATTERN.md`** (179 lines) — "I have X → which pattern?". 8 decision tables (navigation, overlay, list/table, form, feedback, onboarding, loading/empty/error, XR-specific). Max 2 recommendations + 1 anti-pattern per case. Claude routes to MASTER for implementation on "go". Trigger verbs: "quel pattern", "quelle nav", "tab ou drawer".
+- **`prompts/PROMPT_SPEC_FROM_SCRATCH.md`** (246 lines) — describe-app-in-2-sentences → complete design spec (tokens + nav + components v0 + user flows + priority-ordered screens + states coverage + a11y baseline + risks / open questions). 8-question discovery phase capped, with documented safe defaults. Chain-aware (routes to TOKENS_EXPORT / MASTER / DESIGN_AUDIT). Trigger verbs: "spec mon app", "from scratch", "nouveau projet".
+- **`prompts/PROMPT_CODE_REVIEW.md`** (208 lines) — diff / PR / snippet review with P0/P1/P2/P3 priority buckets. 8-category grid (touch, contrast, focus, spacing, states, semantic, motion, platform-specific). Before/after code pairs for every P0/P1. Framework-specific red-flag examples (CSS, React/Tailwind, SwiftUI, Compose, XR/visionOS). No flattering, direct on problems. Trigger verbs: "review code", "review ce diff", "audit mon code".
+- **`prompts/VISION.md`** (285 lines) — prompt system v2.0 roadmap. Honest self-assessment of what works and what doesn't. Documents 10 improvement levers (compression, versioning, parameterization, chain formalization, project memory, shared fragments, self-audit meta-prompt, feedback loop, adversarial mode, missing prompts) with a 4-sprint execution plan. Not a prompt itself — a design doc for where the system goes next.
 
 ### Added — Tokens export (monetization killer feature)
 - **`prompts/PROMPT_TOKENS_EXPORT.md`** (835 lines) — generates importable design tokens from VALUES.md in **8 formats**: CSS custom properties, Tailwind config, Flutter ThemeData + Material 3 theme, SwiftUI theme (incl. visionOS), iOS UIKit, Kotlin Compose theme, Android XML resources (dimens / integers / styles), Figma Tokens JSON (Tokens Studio format). Transforms the bible from "doc to read" into "config to import". Trigger verbs: "export tokens", "seed design system", "génère les tokens [format]". Added to PROMPT_MASTER routing table.
-- `prompts/README.md` — router updated with tokens export branch (flowchart + routing table).
-- `prompts/PROMPT_MASTER.md` — routing table + initialization message updated to include tokens_export.
+- `prompts/README.md` — router updated with all 4 new branches (tokens, pick-pattern, spec-from-scratch, code-review) + VISION link.
+- `prompts/PROMPT_MASTER.md` — routing table + initialization message updated to include the 4 new prompts.
 
 
 ### Added — XR / Spatial Computing

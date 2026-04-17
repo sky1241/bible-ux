@@ -107,6 +107,9 @@ L'user peut invoquer un mode spécialisé via un trigger verbal. Tu charges alor
 | "audit", "c'est moche", "rend ça pro" | `PROMPT_DESIGN_AUDIT.md` | Critique 7 péchés + 12 axes |
 | "css fix", "pas droit", "aligne ça" | `PROMPT_CSSFIX.md` | Labels zones + confirm + fix |
 | "export tokens", "seed design system", "génère les tokens [format]" | `PROMPT_TOKENS_EXPORT.md` | Génère tokens CSS / Tailwind / Flutter / SwiftUI / Compose / Android XML / Figma depuis VALUES.md |
+| "quel pattern", "quelle nav", "tab ou drawer" | `PROMPT_PICK_PATTERN.md` | Recommande 1 pattern + 1 alternative avec bible refs |
+| "spec mon app", "from scratch", "nouveau projet" | `PROMPT_SPEC_FROM_SCRATCH.md` | Produit une spec design complète depuis description |
+| "review code", "review ce diff", "audit mon code" | `PROMPT_CODE_REVIEW.md` | Review P0/P1/P2/P3 avec bible refs + fix |
 | "mode reprise", "mode autonome" | `PROMPT_REPRISE.md` | Propose / valide / exécute |
 | "surprends-moi", "sors des règles" | `PROMPT_TEST_CREATIF.md` | Mode créatif sans citations |
 | "integre la deep research" | `PROMPT_INTEGRATION_DEEP_RESEARCH.md` | Dedup + WebSearch + intégration |
@@ -120,7 +123,7 @@ L'user peut invoquer un mode spécialisé via un trigger verbal. Tu charges alor
 bible-ux chargée.
 Plateformes : Web + iOS + Android + Wear OS + watchOS + ICONS.
 Source canonique : VALUES.md.
-Prompts disponibles : audit, cssfix, tokens_export, reprise, integration_dr, test_creatif.
+Prompts disponibles : audit, cssfix, tokens_export, pick_pattern, spec_from_scratch, code_review, reprise, integration_dr, test_creatif.
 Prêt.
 ```
 

@@ -8,19 +8,42 @@ Current version: **1.2.0-unreleased** (see [stats.json](stats.json)).
 
 ## Recently shipped (unreleased)
 
-- [x] **PROMPT_TOKENS_EXPORT.md** — killer feature shipped. 835-line prompt covering 8 export formats: CSS custom properties, Tailwind config, Flutter ThemeData, SwiftUI theme, iOS UIKit, Kotlin Compose, Android XML (dimens / integers / styles), Figma Tokens JSON (Tokens Studio). Transforms VALUES.md from "doc to read" into "config to import" — the jump that justifies the $49 Gumroad price.
-- [x] **XR.md** — 4th platform bible (Vision Pro, Meta Quest, Samsung Galaxy XR, Pico, Vive, Varjo, PSVR2, smart glasses Ray-Ban Meta / XREAL / VITURE / Rokid / RayNeo / Halliday / Snap). 842 lines, 14 sections (A → N), 54 subsections. Sourced from ChatGPT Deep Research baseline 2026-04-17 with 76 primary citations. Cross-referenced from [MOBILE.md § CJ](MOBILE.md).
+- [x] **PROMPT_PICK_PATTERN.md** (179 lines) — "I have X → which pattern?" with 8 decision tables (navigation, overlay, list/table, form, feedback, onboarding, loading/empty/error, XR-specific). Max 2 recommendations + 1 anti-pattern per case. Chain-aware (routes to MASTER for implementation).
+- [x] **PROMPT_SPEC_FROM_SCRATCH.md** (246 lines) — describe-app-in-2-sentences → full spec (tokens + nav + components v0 + user flows + screens ordered by priority + states coverage + a11y baseline + risks). 8-question discovery phase capped, with documented safe defaults. Chain-aware.
+- [x] **PROMPT_CODE_REVIEW.md** (208 lines) — diff / PR / snippet review with P0/P1/P2/P3 priority buckets. 8-category grid (touch, contrast, focus, spacing, states, semantic, motion, platform-specific). Before/after code pair for every P0/P1. Framework-specific red flags (CSS, React/Tailwind, SwiftUI, Compose, XR). Chain-aware.
+- [x] **prompts/VISION.md** — v2.0 roadmap for the prompt system itself. Documents 10 improvement levers (compression, versioning, parameterization, chain formalization, project memory, shared fragments, self-audit, feedback loop, adversarial mode, missing prompts) and 4-sprint execution plan.
+- [x] **PROMPT_TOKENS_EXPORT.md** (835 lines) — killer feature. 8 export formats: CSS, Tailwind, Flutter ThemeData, SwiftUI, iOS UIKit, Compose, Android XML, Figma Tokens JSON.
+- [x] **XR.md** (842 lines) — 4th platform bible covering headsets + smart glasses, sourced from ChatGPT Deep Research with 76 citations.
 
 ## Now — in progress
 
 _(nothing in progress — free slot)_
 
-## Next — priority 1 (monetization-critical)
+## Next — prompt system v2.0 (from VISION.md)
 
-### Remaining prompts to fill the routing gaps
-- [ ] **PROMPT_SPEC_FROM_SCRATCH.md** — "describe your app in 2 sentences → full design spec output". Targets greenfield projects, not just "fix the existing ugly thing".
-- [ ] **PROMPT_PICK_PATTERN.md** — "I have X destinations, Y users, Z constraints → which pattern from DESIGN_TREE?". Exploits the underused decision tree.
-- [ ] **PROMPT_CODE_REVIEW.md** — review a diff / PR against the bibles (code-level, not screenshot-level).
+Priority-ordered sprints documented in [prompts/VISION.md](prompts/VISION.md):
+
+### Sprint 1 — cleanup + structure
+- [ ] Compress PROMPT_DESIGN_AUDIT.md from 935 → 300 lines (references VALUES.md + fragments)
+- [ ] Create `prompts/_fragments/` with 5 reusable fragments (7 sins, 12 axes, P0/P1 format, states coverage, chain footer)
+- [ ] Add YAML frontmatter versioning to every prompt (version, updated, chains_from, chains_to, trigger_aliases)
+- [ ] Standardize a `## Chain` block at the end of every prompt
+
+### Sprint 2 — parameters + feedback
+- [ ] Add params on DESIGN_AUDIT / CODE_REVIEW / SPEC (`audit quick`, `audit deep`, `audit a11y`, `review strict`, `review p0-only`, `spec rapide`, `spec exhaustive`)
+- [ ] `prompts/FEEDBACK.md` + protocol for ✓/✗ logging after each prompt run
+
+### Sprint 3 — project memory + self-audit
+- [ ] Convention `.bible-ux/project.json` loaded by PROMPT_MASTER on startup (stack, targets, brand, a11y level)
+- [ ] `PROMPT_META_AUDIT.md` scans bibles for contradictions, stale values, broken cross-refs, dead URLs. Quarterly run.
+
+### Sprint 4 — coverage extensions
+- [ ] `PROMPT_A11Y_AUDIT.md` — dedicated a11y audit (axe-core rules + manual pass)
+- [ ] `PROMPT_UX_WRITING.md` — microcopy / ton / button labels
+- [ ] `PROMPT_MIGRATE_TO_BIBLE.md` — audit existing project and produce migration plan
+- [ ] `PROMPT_DEVILS_ADVOCATE.md` — attack a design decision before it ships
+- [ ] `PROMPT_GROWTH_UX.md` — ethical growth patterns (onboarding, referral, retention)
+- [ ] `PROMPT_DARK_PATTERN_DETECTOR.md` — flag dark patterns in a flow
 
 ### Copyright & legal (do before any paid distribution)
 - [ ] **Review `_sources/*.pdf` copyright status** — see [_sources/SOURCES.md](_sources/SOURCES.md). For each PDF: identify origin, verify license, keep / replace-with-URL-citation / delete. Any third-party copyrighted content must be removed before commercial sale on Gumroad / Product Hunt / HN.
