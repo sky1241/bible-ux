@@ -1,5 +1,19 @@
 # DEEP RESEARCH PROMPT - UX WEARABLE / SMARTWATCH (~170 pages cible)
 
+## WHEN
+- Tu veux enrichir `WEARABLE.md` sur un sujet smartwatch spécifique (Wear OS, watchOS, Fitbit, Garmin)
+- Usage : **copier-coller TOUT ce fichier dans ChatGPT Deep Research**
+- Puis utiliser `PROMPT_INTEGRATION_DEEP_RESEARCH.md`
+
+## WHEN NOT
+- Web, mobile, XR → utiliser les prompts DR dédiés
+- Question ponctuelle wearable → grep direct dans WEARABLE.md
+
+## TRIGGER VERBAL
+(destiné à ChatGPT, pas à Claude)
+
+---
+
 ## CONTEXTE
 Je construis une base de connaissances UX/UI EXHAUSTIVE pour applications **smartwatch** (Wear OS + watchOS + Tizen legacy + Fitbit OS + Garmin Connect IQ).
 J'ai deja une base solide Web + iOS + Android (MOBILE.md, WEB.md, DESIGN_TREE.md) avec ~200 pages de regles.

@@ -1,40 +1,57 @@
-# InfernalWheel - Prompt de Reprise
+# MODE REPRISE / AUTONOME - Tu proposes, je valide
 
-> **FATIGUE?** → Va direct a la section "MODE AUTONOME" ci-dessous
+## WHEN
+- Tu reprends un projet apres une pause (quelques heures, quelques jours, quelques semaines)
+- Tu es fatigue, tu veux pas devoir tout formuler, tu preferes valider des propositions
+- Tu envoies une screenshot / une demande vague et tu veux que l'IA analyse + propose + applique
+
+## WHEN NOT
+- Tu sais exactement ce que tu veux faire → parle-lui directement, pas besoin de ce mode
+- Bug precis localise → `PROMPT_CSSFIX.md`
+- Screenshot d'un ecran entier a critiquer → `PROMPT_DESIGN_AUDIT.md`
+
+## TRIGGER VERBAL
+"mode reprise", "mode autonome", "reprend"
+
+## NOTE
+Ce prompt est **generique** et s'applique a tout projet. Si tu veux une version specifique a ton projet (chemins, commandes, IDs JS proteges, etc.), cree un `PROMPT_REPRISE_<PROJET>.md` dans ton projet (pas dans bible-ux public).
 
 ---
 
-## MODE AUTONOME (Quand t'es crevé)
+## MODE AUTONOME (quand t'es crevé)
 
-Tu es en mode **"je te donne, tu decides"**. L'utilisateur est fatigue, il veut:
-- Donner une screenshot ou une demande vague
+Tu es en mode **"je te donne, tu décides"**. L'user est fatigué, il veut :
+
+- Donner un screenshot ou une demande vague
 - Que tu analyses et proposes
 - Valider ou refuser, c'est tout
 
 ### Raccourcis Magiques
 
-| Tu dis | Claude fait |
-|--------|-------------|
-| "screenshot" + image | Analyse complete + propositions |
-| "c'est moche" | Mode holistique, redesign creatif |
-| "optimise" | Audit complet vs regles UX |
-| "ok" / "go" / "oui" | Execute les propositions |
-| "non" / "stop" | Arrete et demande quoi changer |
-| "push" | Commit + push GitHub |
-| "relance" | Restart serveur |
+| L'user dit | Tu fais |
+|------------|---------|
+| "screenshot" + image | Analyse complète + propositions |
+| "c'est moche" | Mode holistique, redesign créatif (route vers `PROMPT_DESIGN_AUDIT.md`) |
+| "optimise" | Audit complet vs règles UX |
+| "ok" / "go" / "oui" | Exécute les propositions |
+| "non" / "stop" | Arrête et demande quoi changer |
+| "push" | Commit + push Git |
+| "relance" | Restart serveur local (si applicable au projet) |
 
 ### Workflow Autonome
 
-1. **Lire** `ux_resources/DESIGN_TREE.md` (identifier la phase 0-7)
-2. **Grep** dans `WEB.md` + `MOBILE.md` par keywords
-3. **Lire** le code concerné
-4. **Proposer** avec ce format:
+1. **Lire** `bible-ux/DESIGN_TREE.md` (identifier la phase 0-7 applicable)
+2. **Consulter `VALUES.md`** pour les valeurs canoniques (touch, spacing, contraste, timings)
+3. **Grep** dans les bibles pertinentes (`WEB.md`, `MOBILE.md`, `WEARABLE.md`) par keywords
+4. **Lire** le code concerné dans le projet
+5. **Proposer** avec ce format :
+
 ```
 ## Analyse
 [Ce que j'ai vu]
 
 ## Problemes
-1. [Probleme] → [Regle violee] → [Solution]
+1. [Probleme] → [Regle violee, cite VALUES/WEB/MOBILE/WEARABLE §X] → [Solution]
 
 ## Actions Proposees
 - [ ] Action 1
@@ -42,57 +59,57 @@ Tu es en mode **"je te donne, tu decides"**. L'utilisateur est fatigue, il veut:
 
 Tu valides? (oui/non/modifie)
 ```
-5. **Executer** si validation
-6. **Commit + Push** si ok
+
+6. **Executer** si validation ("ok", "go", "oui")
+7. **Commit + Push** si "push"
 
 ### Valeurs Cles (Memo Rapide)
 
-| Quoi | Valeur |
-|------|--------|
-| Touch target | 44px minimum |
-| Spacing base | 4px (8, 12, 16, 24, 32, 48) |
-| Contraste texte | 4.5:1 |
-| Contraste UI | 3:1 |
-| Focus | 2px solid + offset 2px |
-| Animation micro | 100-200ms |
-| Animation standard | 250-350ms |
-| Spring bounce | 0.15 subtil, 0.30 visible |
+> Note : la source canonique reste `VALUES.md` a la racine de bible-ux. Ce tableau est un rappel pratique, pas une source of truth.
+
+| Quoi | Valeur | Section bible |
+|------|--------|---------------|
+| Touch target iOS | 44 pt | MOBILE § A1 |
+| Touch target Android | 48 dp | MOBILE § B |
+| Touch target Web | 24 px min, 44 px ideal | WEB § F |
+| Touch target Wear | 48 dp min, 52 dp recommande | WEARABLE § B |
+| Spacing base | 4 px | VALUES § Spacing |
+| Contraste texte | 4.5:1 | VALUES § Contrast |
+| Contraste UI | 3:1 | VALUES § Contrast |
+| Focus | outline 2 px solid + offset 2 px | VALUES § Focus |
+| Animation micro | 100-200 ms | VALUES § Animation |
+| Animation standard | 250-350 ms | VALUES § Animation |
+| Animation large | 400-600 ms | VALUES § Animation |
 
 ---
 
-## Contexte Projet
+## REGLE #1 - CROISER WEB + MOBILE POUR LE FEELING PREMIUM
 
-Dashboard PowerShell generant HTML/CSS/JS pour tracker les addictions (alcool, tabac).
-- **Fichier principal:** `hellwell/dashboard/Dashboard.Page.ps1`
-- **URL:** http://127.0.0.1:8011/
-- **Taille fichier:** ~2800 lignes (CSS + HTML + JS + PowerShell)
+Pour etre creatif et pas juste mecanique, tu lis et tu melanges les deux bibles :
 
----
+| Fichier | Ce qu'on en tire | Pourquoi croiser |
+|---------|------------------|------------------|
+| `WEB.md` | WCAG, patterns, accessibilite | Les bases solides |
+| `MOBILE.md` | iOS HIG, Material 3, valeurs precises, feeling tactile | Valeurs plus strictes, UX plus premium |
 
-## REGLE #1 - CREER AVEC LES 2 FICHIERS UX MELANGES
+**Le secret :** appliquer les standards MOBILE au WEB = meilleur resultat
 
-Pour etre CREATIF et pas juste mecanique, tu dois TOUJOURS lire et MELANGER:
-
-| Fichier | Contenu | Pourquoi le melanger |
-|---------|---------|---------------------|
-| `ux_resources/WEB.md` | ~200 regles web (WCAG, patterns, accessibilite) | Les bases solides |
-| `ux_resources/MOBILE.md` | ~300 regles mobile (iOS HIG, Material 3, valeurs concretes) | Les valeurs precises et le feeling tactile |
-
-**Le secret:** Appliquer les standards MOBILE au WEB = meilleur resultat
-- Touch targets 44-48px (pas 24px)
-- Spacing genereux (8px minimum, 16px prefere)
-- Feedback immediat < 100ms
+- Touch targets 44-48 px (pas 24 px)
+- Spacing genereux (8 px minimum, 16 px prefere)
+- Feedback immediat < 100 ms
 - Etats clairs (hover, active, disabled, loading)
 
 ### Mode Holistique = PENSER comme un designer
 
-Quand je dis "j'aime pas", "c'est moche", "ameliore", "retouche":
-1. Lire les 2 fichiers UX
+Quand l'user dit "j'aime pas", "c'est moche", "ameliore", "retouche" :
+
+1. Lire les 2 fichiers UX pertinents
 2. Voir la PAGE ENTIERE - pas juste l'element mentionne
 3. Proposer des changements STRUCTURELS - pas juste cosmetiques
 4. Etre CREATIF et AUDACIEUX - effet "waow"
 
-**Anti-patterns:**
+**Anti-patterns :**
+
 - Demander 15 clarifications avant d'agir
 - Appliquer les regles mecaniquement
 - Faire le minimum
@@ -100,13 +117,13 @@ Quand je dis "j'aime pas", "c'est moche", "ameliore", "retouche":
 
 ---
 
-## REGLE #1.5 - RECHERCHE UX INTELLIGENTE (OBLIGATOIRE)
+## REGLE #2 - RECHERCHE UX INTELLIGENTE (OBLIGATOIRE)
 
-Quand l'utilisateur dit **"intègre les règles UX"** ou mentionne un élément UI:
+Quand l'user dit **"integre les regles UX"** ou mentionne un element UI :
 
-### Étape 1: Identifier le type d'élément
+### Etape 1: Identifier le type d'element
 
-| Élément mentionné | Type |
+| Element mentionne | Type |
 |-------------------|------|
 | bouton, btn, click, action | `BUTTON` |
 | input, champ, formulaire, form, saisie | `FORM` |
@@ -119,278 +136,104 @@ Quand l'utilisateur dit **"intègre les règles UX"** ou mentionne un élément 
 | spacing, margin, padding, gap | `SPACING` |
 | texte, typo, font, label | `TYPO` |
 
-### Étape 2: Grep les fichiers UX avec les bons mots-clés
+### Etape 2: Grep les fichiers UX avec les bons mots-cles
 
 ```bash
 # BUTTON
-Grep -i "button|touch.target|click|tap|hover|active|disabled|focus" ux_resources/WEB.md
-Grep -i "button|touch.target|44.*pt|48.*dp|press|tap" ux_resources/MOBILE.md
+Grep -i "button|touch.target|click|tap|hover|active|disabled|focus" WEB.md
+Grep -i "button|touch.target|44.*pt|48.*dp|press|tap" MOBILE.md
 
 # FORM
-Grep -i "input|form|validation|label|placeholder|error|field" ux_resources/WEB.md
-Grep -i "input|form|keyboard|text.field|picker" ux_resources/MOBILE.md
+Grep -i "input|form|validation|label|placeholder|error|field" WEB.md
+Grep -i "input|form|keyboard|text.field|picker" MOBILE.md
 
 # MODAL
-Grep -i "modal|dialog|overlay|backdrop|dismiss|escape" ux_resources/WEB.md
-Grep -i "modal|sheet|dialog|overlay|present" ux_resources/MOBILE.md
+Grep -i "modal|dialog|overlay|backdrop|dismiss|escape" WEB.md
+Grep -i "modal|sheet|dialog|overlay|present" MOBILE.md
 
 # NAV
-Grep -i "navigation|menu|dropdown|breadcrumb|tab|link" ux_resources/WEB.md
-Grep -i "navigation|tab.bar|bottom|drawer|back" ux_resources/MOBILE.md
+Grep -i "navigation|menu|dropdown|breadcrumb|tab|link" WEB.md
+Grep -i "navigation|tab.bar|bottom|drawer|back" MOBILE.md
 
 # LIST
-Grep -i "list|table|grid|card|item|row|cell" ux_resources/WEB.md
-Grep -i "list|table|collection|cell|swipe" ux_resources/MOBILE.md
+Grep -i "list|table|grid|card|item|row|cell" WEB.md
+Grep -i "list|table|collection|cell|swipe" MOBILE.md
 
 # FEEDBACK
-Grep -i "toast|snackbar|notification|alert|success|error" ux_resources/WEB.md
-Grep -i "toast|snackbar|haptic|feedback|banner" ux_resources/MOBILE.md
+Grep -i "toast|snackbar|notification|alert|success|error" WEB.md
+Grep -i "toast|snackbar|haptic|feedback|banner" MOBILE.md
 
 # LOADING
-Grep -i "loading|spinner|skeleton|progress|async" ux_resources/WEB.md
-Grep -i "loading|spinner|skeleton|indicator|activity" ux_resources/MOBILE.md
+Grep -i "loading|spinner|skeleton|progress|async" WEB.md
+Grep -i "loading|spinner|skeleton|indicator|activity" MOBILE.md
 
 # COLOR
-Grep -i "color|contrast|wcag|theme|dark|light|accent" ux_resources/WEB.md
-Grep -i "color|dynamic|system|palette|semantic" ux_resources/MOBILE.md
+Grep -i "color|contrast|wcag|theme|dark|light|accent" WEB.md
+Grep -i "color|dynamic|system|palette|semantic" MOBILE.md
 
 # SPACING
-Grep -i "spacing|margin|padding|gap|grid|layout" ux_resources/WEB.md
-Grep -i "spacing|margin|padding|safe.area|inset" ux_resources/MOBILE.md
+Grep -i "spacing|margin|padding|gap|grid|layout" WEB.md
+Grep -i "spacing|margin|padding|safe.area|inset" MOBILE.md
 
 # TYPO
-Grep -i "typography|font|text|label|size|weight|line" ux_resources/WEB.md
-Grep -i "typography|font|dynamic.type|text.style|sf.pro" ux_resources/MOBILE.md
+Grep -i "typography|font|text|label|size|weight|line" WEB.md
+Grep -i "typography|font|dynamic.type|text.style|sf.pro" MOBILE.md
 ```
 
-### Étape 3: Appliquer TOUTES les règles trouvées
+### Etape 3: Appliquer TOUTES les regles trouvees
 
-Lire les résultats du Grep et appliquer chaque règle:
-- Valeurs concrètes (44px, 4.5:1, etc.)
-- États (hover, active, disabled, focus, loading)
+Lire les resultats du Grep et appliquer chaque regle :
+
+- Valeurs concretes (44 px, 4.5:1, etc.)
+- Etats (hover, active, disabled, focus, loading)
 - Feedback (animations, transitions, toasts)
-- Accessibilité (contrast, ARIA, focus visible)
+- Accessibilite (contrast, ARIA, focus visible)
 
 ---
 
-## REGLE #2 - TOUJOURS RELANCER LE SERVEUR
+## REGLE #3 - WORKFLOW GIT (SI PROJET A GIT)
 
-Apres CHAQUE modification du fichier `Dashboard.Page.ps1`, tu DOIS relancer.
-
-### Commande one-liner (RECOMMANDEE)
+Apres chaque modification VALIDEE par l'user :
 
 ```bash
-taskkill /F /IM powershell.exe /T 2>nul & ping -n 2 127.0.0.1 >nul & powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File c:\Users\ludov\.infernal_wheel\hellwell\start_dashboard.ps1' -WindowStyle Hidden"
+# Stage + commit + push
+git add <fichiers>
+git commit -m "feat/fix(scope): description"
+git push
 ```
 
-### Verification (attendre 4-5 sec)
+**Annuler si besoin :**
 
 ```bash
-powershell.exe -NoProfile -Command "Start-Sleep -Seconds 4; Get-NetTCPConnection -LocalPort 8011 -State Listen"
-```
+# Annuler modifications non commitees
+git checkout -- <fichier>
 
-**IMPORTANT:**
-- Si tu oublies de relancer, l'utilisateur verra l'ancienne version!
-- Dire a l'utilisateur de faire **Ctrl+F5** (hard refresh) pour vider le cache
-
----
-
-## REGLE #3 - TOUJOURS SAUVER SUR GITHUB
-
-Apres chaque modification VALIDEE par l'utilisateur:
-
-```bash
-cd "c:\Users\ludov\.infernal_wheel" && git add hellwell/dashboard/Dashboard.Page.ps1 && git commit -m "$(cat <<'EOF'
-feat/fix(ui): description courte
-
-- Detail 1
-- Detail 2
-
-Co-Authored-By: Claude <noreply@anthropic.com>
-EOF
-)" && git push
-```
-
-**Annuler si besoin:**
-```bash
-# Annuler modifications non commitees:
-git checkout -- hellwell/dashboard/Dashboard.Page.ps1
-
-# Revenir a un commit precedent:
+# Revenir a un commit precedent
 git log --oneline -5
-git checkout <hash> -- hellwell/dashboard/Dashboard.Page.ps1
+git checkout <hash> -- <fichier>
 ```
 
 ---
 
-## Structure du Fichier Dashboard.Page.ps1
+## PROJECT-SPECIFIC OVERRIDES
 
-| Lignes | Contenu |
-|--------|---------|
-| 1-120 | **PowerShell** - Generation HTML calendrier |
-| 120-220 | **PowerShell** - Calculs stats, timeline, rapports |
-| 220-820 | **CSS** - Variables, layout, composants generaux |
-| 820-1180 | **CSS** - Calendrier (table, cellules, badges) |
-| 1180-1300 | **CSS** - Cards calendrier, legende |
-| 1300-2100 | **HTML** - Structure page complete |
-| 2100-2800 | **JavaScript** - Logique interactive |
+Si ton projet a des specificites (chemins, commandes de build, serveurs locaux, IDs JS proteges, etc.), cree un `PROMPT_REPRISE_<PROJET>.md` dans le projet lui-meme (pas dans bible-ux public) et reference ce fichier generique comme base.
 
-### Pour chercher une section:
+Exemple de structure locale :
 
-```bash
-# Trouver le calendrier
-Grep "calendar|calendrier" Dashboard.Page.ps1
-
-# Trouver une classe CSS
-Grep "\.maClasse" Dashboard.Page.ps1
-
-# Trouver un ID JS
-Grep "getElementById.*monId" Dashboard.Page.ps1
 ```
+mon-projet/
+  PROMPT_REPRISE_MONPROJET.md   # Surcouche specifique (chemins, serveur, IDs, etc.)
+  ux_resources/                  # Clone de bible-ux
+    prompts/
+      PROMPT_REPRISE.md          # Ce fichier generique
+```
+
+Le prompt local commence par "Mode reprise pour <projet>. En plus du PROMPT_REPRISE generique de bible-ux, specifique a ce projet : …".
 
 ---
 
-## Structure Cellule Calendrier
-
-```html
-<td class="day today">
-  <div class="dhead">
-    <div class="dhead-left">
-      <span class="dnum">7</span>
-      <span class="dtoday-badge">Aujourd'hui</span>
-    </div>
-    <span class="dwork">💻 7h51m</span>
-  </div>
-  <div class="dstats">
-    <span class="dstat dstat--sleep">💤 6h</span>
-    <span class="dstat dstat--alc">🍷1 🍺3 🍻1</span>
-    <span class="dstat dstat--smoke">🚬9</span>
-  </div>
-  <div class="dacts">
-    <span class="dacts-toggle">📋 5 activités</span>
-    <div class="dacts-details"><!-- tooltip hover --></div>
-  </div>
-  <div class="dlink">
-    <a href="/notes?d=2026-02-07">📝 Notes</a>
-  </div>
-</td>
-```
-
-### Classes CSS calendrier
-
-| Classe | Role |
-|--------|------|
-| `.dhead` | Header: numero + badge travail |
-| `.dhead-left` | Conteneur numero + badge aujourd'hui |
-| `.dnum` | Numero du jour (grand, bold) |
-| `.dtoday-badge` | Badge "Aujourd'hui" (vert accent) |
-| `.dwork` | Badge travail (rose/magenta) |
-| `.dstats` | Ligne des stats compactes |
-| `.dstat--sleep` | Badge sommeil (bleu/violet) |
-| `.dstat--alc` | Badge alcool (jaune/or) |
-| `.dstat--smoke` | Badge clopes (rouge) |
-| `.dacts` | Conteneur activites avec tooltip |
-| `.dlink` | Bouton Notes en bas |
-
----
-
-## Pieges CSS a Eviter
-
-### 1. Tooltips coupes
-```css
-/* PROBLEME */
-td.day { overflow: hidden; }
-
-/* SOLUTION */
-td.day { overflow: visible; }
-table { overflow: visible; }
-.tooltip { z-index: 9999; }
-```
-
-### 2. Position absolue qui chevauche
-```css
-/* PROBLEME: ::before chevauche d'autres elements */
-td.day.today::before { position: absolute; top: 8px; right: 8px; }
-
-/* SOLUTION: integrer dans le flux HTML */
-.dtoday-badge { display: inline-flex; /* pas de position absolute */ }
-```
-
-### 3. Flexbox avec elements manquants
-```css
-/* PROBLEME: si element vide, alignement casse */
-.dhead { justify-content: space-between; }
-
-/* SOLUTION: wrapper les elements */
-.dhead-left { display: flex; gap: 6px; }
-```
-
----
-
-## Standards Auto-Appliques
-
-| Regle | Valeur |
-|-------|--------|
-| Touch targets | 44-48px (mobile -> web) |
-| Spacing | base 4px (8, 12, 16, 24, 32, 48) |
-| Contraste texte | WCAG 4.5:1 |
-| Contraste composants | WCAG 3:1 |
-| Feedback | < 100-200ms |
-| Focus visible | `outline: 2px solid; outline-offset: 2px` |
-| Font chiffres | `font-variant-numeric: tabular-nums` |
-| Poids typo | Regular(400) donnees, Medium(500) labels, Bold(700) titres |
-| Border radius | 4-6px petits, 8-12px cards |
-| Transitions | `all .2s cubic-bezier(.4,0,.2,1)` |
-
----
-
-## Couleurs Semantiques
-
-| Element | Couleur | CSS |
-|---------|---------|-----|
-| Accent (succes) | Vert | `--accent: #35d99a` |
-| Travail | Rose/Magenta | `rgba(255,79,216,...)` |
-| Sommeil | Bleu/Violet | `rgba(102,126,234,...)` |
-| Alcool | Jaune/Or | `rgba(246,183,60,...)` |
-| Clopes | Rouge | `rgba(255,77,77,...)` |
-| Muted | Gris clair | `var(--muted)` |
-| Border | Blanc transparent | `rgba(255,255,255,.06-.12)` |
-
----
-
-## IDs JavaScript CRITIQUES (NE PAS TOUCHER)
-
-| Zone | IDs |
-|------|-----|
-| Stats | `statGoal`, `statDone`, `statBreak`, `kRemain`, `progressPct`, `bar` |
-| Action | `kSeg`, `kSeg2`, `kTimerElapsed`, `kTimerRemain`, `currentBox` |
-| Live | `liveCard`, `firstsToday`, `actionsToday`, `drinkToday`, `smokeToday` |
-| Agenda | `agendaTimeline`, `agendaClock`, `agendaToggle`, `agendaDetails` |
-
----
-
-## Fichiers Cles
-
-```
-c:\Users\ludov\.infernal_wheel\
-  hellwell\
-    dashboard\
-      Dashboard.Page.ps1    <- UI principale (~2800 lignes)
-    start_dashboard.ps1     <- Script de demarrage
-  ux_resources\
-    DESIGN_TREE.md          <- ARBRE DE DECISION (lire en premier!)
-    WEB.md                  <- ~260 regles web
-    MOBILE.md               <- ~320 regles mobile
-    prompts\
-      PROMPT_REPRISE.md     <- CE FICHIER
-      PROMPT_CSSFIX.md      <- Mode CSS fix rapide
-      PROMPT_CALENDRIER_CREATIF.md <- Mode calendrier
-    COMMANDES.txt           <- Liste des commandes disponibles
-```
-
----
-
-## Arbre Mental
+## ARBRE MENTAL GENERIC
 
 ```
                          DESIGN
@@ -422,5 +265,4 @@ c:\Users\ludov\.infernal_wheel\
 
 ---
 
-*Derniere mise a jour: 2026-02-09*
 *Mode autonome - Tu donnes, je decide, tu valides.*

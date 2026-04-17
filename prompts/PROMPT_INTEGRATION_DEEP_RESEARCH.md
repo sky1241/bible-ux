@@ -1,5 +1,18 @@
 # PROMPT INTÉGRATION DEEP RESEARCH
 
+## WHEN
+- Tu as lancé une Deep Research ChatGPT (via un des `PROMPT_DEEP_RESEARCH_*.md`)
+- ChatGPT a renvoyé les résultats (markdown, ~50-170 pages)
+- Tu veux intégrer proprement dans les bibles sans créer de doublons
+
+## WHEN NOT
+- Pas encore lancé la DR → utilise d'abord un `PROMPT_DEEP_RESEARCH_*.md`
+- Si tu veux ajouter juste 1-2 règles → édite directement la bible concernée
+- Si les résultats sont < 20 lignes → pas besoin du workflow, ajoute à la main
+
+## TRIGGER VERBAL
+"integre la deep research", "integre tout", "verifie doublons"
+
 ## CONTEXTE
 Tu vas recevoir les résultats d'une Deep Research ChatGPT (~100 pages) couvrant:
 - Gamification & Engagement

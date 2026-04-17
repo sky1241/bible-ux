@@ -79,8 +79,8 @@ bible-ux/
     06_mobile_values.pdf  07_premium_feel.pdf
 
   COMMANDES.txt                   # French command cheat-sheet
-  TODO_MONETISATION.txt           # Author's monetization plan
-  .winter-tree-stats.json         # Repo metadata snapshot
+  stats.json                      # Repo metadata snapshot (auto-updated)
+  .gitignore
 ```
 
 ## Topic → section shortcut
@@ -144,7 +144,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the full history. Current version: **1.0.0*
 
 **Planned:**
 - `XR.md` — spatial computing + smart glasses bible (Vision Pro, Meta Quest, Android XR, Ray-Ban Meta, Xreal). Deep Research prompt already in [prompts/PROMPT_DEEP_RESEARCH_XR.md](prompts/PROMPT_DEEP_RESEARCH_XR.md).
-- Visual before/after examples (see [TODO_MONETISATION.txt](TODO_MONETISATION.txt)).
+- Visual before/after examples gallery.
 
 ## License
 
@@ -152,7 +152,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the full history. Current version: **1.0.0*
 
 | Part | License | Summary |
 |------|---------|---------|
-| `prompts/**`, `DESIGN_TREE.md`, `VALUES.md`, `COMMANDES.txt`, `README*.md`, `CHANGELOG.md`, `.winter-tree-stats.json` | **MIT** | Free to use, fork, modify, redistribute. |
+| `prompts/**`, `DESIGN_TREE.md`, `VALUES.md`, `COMMANDES.txt`, `README*.md`, `CHANGELOG.md`, `stats.json` | **MIT** | Free to use, fork, modify, redistribute. |
 | `WEB.md`, `MOBILE.md`, `WEARABLE.md`, `ICONS.md`, `_sources/**` | **Commercial EULA** | Personal use only. No redistribution. Paid licenses available. |
 
 Commercial licenses available on request (open a GitHub issue or email the author).

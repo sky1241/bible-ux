@@ -4,7 +4,7 @@ This repository uses a **dual license** structure:
 
 | Part of the repo | License | Use |
 |------------------|---------|-----|
-| `prompts/**`, `DESIGN_TREE.md`, `COMMANDES.txt`, `README*.md`, `.winter-tree-stats.json` | **MIT** (see below) | Free to use, fork, modify, redistribute. |
+| `prompts/**`, `DESIGN_TREE.md`, `VALUES.md`, `COMMANDES.txt`, `README*.md`, `CHANGELOG.md`, `stats.json`, `.gitignore` | **MIT** (see below) | Free to use, fork, modify, redistribute. |
 | `WEB.md`, `MOBILE.md`, `WEARABLE.md`, `ICONS.md`, `_sources/**` | **Commercial EULA** (see below) | Personal use only. No redistribution. Paid licenses available. |
 
 The bibles (`WEB.md`, `MOBILE.md`, `WEARABLE.md`, `ICONS.md`) and the source PDFs are the commercial product. Everything else (prompts, workflow files, index) is free and meant to be copied.

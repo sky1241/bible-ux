@@ -1,0 +1,62 @@
+{
+  "repo": "bible-ux",
+  "version": "1.1.0-unreleased",
+  "last_updated": "2026-04-17",
+  "phase": "STABLE",
+  "total_files": 30,
+  "content_lines": 46133,
+  "content_files": {
+    "WEB.md": 15669,
+    "MOBILE.md": 15508,
+    "WEARABLE.md": 13132,
+    "DESIGN_TREE.md": 1216,
+    "ICONS.md": 306,
+    "VALUES.md": 346
+  },
+  "meta_files": {
+    "README.md": 162,
+    "CHANGELOG.md": 66,
+    "LICENSE.md": 94,
+    "COMMANDES.txt": 142,
+    "stats.json": "self"
+  },
+  "prompts": {
+    "count": 9,
+    "total_lines": 4486,
+    "files": {
+      "PROMPT_MASTER.md": 135,
+      "PROMPT_DESIGN_AUDIT.md": 935,
+      "PROMPT_CSSFIX.md": 106,
+      "PROMPT_REPRISE.md": 268,
+      "PROMPT_TEST_CREATIF.md": 48,
+      "PROMPT_INTEGRATION_DEEP_RESEARCH.md": 167,
+      "PROMPT_DEEP_RESEARCH_MASSIVE.md": 659,
+      "PROMPT_DEEP_RESEARCH_WEARABLE.md": 1073,
+      "PROMPT_DEEP_RESEARCH_XR.md": 1011
+    },
+    "router": "prompts/README.md"
+  },
+  "sources": {
+    "count": 7,
+    "size_mb": 1.6,
+    "status": "awaiting_copyright_review",
+    "index": "_sources/SOURCES.md"
+  },
+  "sections_total": 317,
+  "sections_by_bible": {
+    "WEB.md": 107,
+    "MOBILE.md": 105,
+    "WEARABLE.md": 76,
+    "ICONS.md": 29
+  },
+  "platforms": [
+    "Web",
+    "iOS",
+    "Android",
+    "Wear OS",
+    "watchOS",
+    "Garmin Connect IQ"
+  ],
+  "license": "dual (MIT + commercial EULA)",
+  "license_file": "LICENSE.md"
+}

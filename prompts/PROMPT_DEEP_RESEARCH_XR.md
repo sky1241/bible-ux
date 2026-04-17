@@ -1,5 +1,19 @@
 # DEEP RESEARCH PROMPT - UX XR / SPATIAL COMPUTING / SMART GLASSES (~150 pages cible)
 
+## WHEN
+- Tu veux construire la future `XR.md` (Vision Pro, Meta Quest, Android XR, WebXR, smart glasses)
+- Usage : **copier-coller TOUT ce fichier dans ChatGPT Deep Research**
+- Puis utiliser `PROMPT_INTEGRATION_DEEP_RESEARCH.md` (adapter le target file à `XR.md`)
+
+## WHEN NOT
+- Wearable montre → `PROMPT_DEEP_RESEARCH_WEARABLE.md`
+- Autre sujet UX → `PROMPT_DEEP_RESEARCH_MASSIVE.md`
+
+## TRIGGER VERBAL
+(destiné à ChatGPT, pas à Claude)
+
+---
+
 ## CONTEXTE
 Je construis une base de connaissances UX/UI EXHAUSTIVE pour applications **XR** (Extended Reality) : casques VR/AR/MR et lunettes connectees.
 

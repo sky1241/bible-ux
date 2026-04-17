@@ -1,7 +1,17 @@
 # MODE CSS FIX - Correction UI avec Confirmation Visuelle
 
-## QUAND L'UTILISER
-Bug visuel: alignement, spacing, overflow, "ce truc est pas droit", etc.
+## WHEN
+- Bug visuel localisé : alignement, spacing, overflow, un élément "pas droit"
+- Nombre de problèmes identifiés : 1-3 max
+- User dit : "css fix", "aligne ça", "c'est pas droit", "ça déborde"
+
+## WHEN NOT
+- Si toute la page est moche → utiliser `PROMPT_DESIGN_AUDIT.md`
+- Si user veut une nouvelle feature/écran → `PROMPT_MASTER.md` ou `PROMPT_SPEC_FROM_SCRATCH.md`
+- Si bug non-visuel (logique, perf, data) → ce prompt ne s'applique pas
+
+## TRIGGER VERBAL
+"css fix", "aligne ça", "pas droit", "ça déborde"
 
 ## COMMENT L'UTILISER
 1. Envoie ton screenshot

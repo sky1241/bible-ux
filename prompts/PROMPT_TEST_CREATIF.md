@@ -1,5 +1,23 @@
 # PROMPT TEST CRÉATIF
 
+## WHEN
+- Tu veux voir ce que donne Claude/GPT en mode "free", sans citation de règles
+- Tu es bloqué en mode mécanique/ennuyeux et tu veux du créatif
+- Tu testes une nouvelle conversation Claude (session neuve)
+
+## WHEN NOT
+- Production / projet client → utiliser `PROMPT_MASTER.md` (cadre pro)
+- Tu veux un fix précis → `PROMPT_CSSFIX.md`
+- Tu veux une critique structurée → `PROMPT_DESIGN_AUDIT.md`
+
+## TRIGGER VERBAL
+"surprends-moi", "sors des règles", "mode libre"
+
+## NOTE
+Ce prompt désactive volontairement le cadre bible-ux. Il s'utilise rarement, et toujours en session isolée. Pas à combiner avec les autres prompts dans la même session.
+
+---
+
 Copie-colle ce texte dans une NOUVELLE conversation:
 
 ---

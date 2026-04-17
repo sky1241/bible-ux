@@ -1,5 +1,19 @@
 # DEEP RESEARCH PROMPT - UX UNIVERSEL (~100 pages cible)
 
+## WHEN
+- Tu veux enrichir les bibles avec de nouveaux sujets UX universels (gamification, tables, settings, search, loading, dark mode, modals, animations, onboarding…)
+- Usage : **copier-coller TOUT ce fichier dans ChatGPT Deep Research**, attendre les résultats
+- Puis utiliser `PROMPT_INTEGRATION_DEEP_RESEARCH.md` pour intégrer
+
+## WHEN NOT
+- Pour un sujet très spécifique (wearable, XR) → utiliser le prompt dédié
+- Si tu veux juste une recherche rapide → utiliser WebSearch directement
+
+## TRIGGER VERBAL
+(pas applicable dans Claude — ce prompt est destiné à ChatGPT)
+
+---
+
 ## CONTEXTE
 Je construis une base de connaissances UX/UI UNIVERSELLE couvrant:
 - **Web** (desktop + responsive)

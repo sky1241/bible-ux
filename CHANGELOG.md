@@ -5,16 +5,30 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
-## [Unreleased]
+## [Unreleased] — Prompts routing + senior-dev cleanup
 
 ### Added
-- `prompts/PROMPT_DEEP_RESEARCH_XR.md` — 640-line Deep Research prompt covering Vision Pro, Meta Quest, Android XR, WebXR, and smart glasses (Ray-Ban Meta, Xreal, Samsung Galaxy Glasses, Halliday). 15 parts covering hardware, spatial design, input, UI patterns, passthrough, spatial audio, motion sickness, performance, privacy, accessibility, development frameworks, multi-user, smart glasses specifics, emerging tech, and anti-patterns.
-- `LICENSE.md` — dual license (MIT for prompts/index, commercial EULA for the bibles).
-- `CHANGELOG.md` — this file.
+- `prompts/README.md` — **routing guide** (ASCII flowchart + situation→prompt table). Solves "which prompt do I use when?" problem.
+- `prompts/PROMPT_MASTER.md` — **context primer** to paste at the start of a new Claude/GPT session. Auto-routes to other prompts via verbal triggers. Establishes strict reference hierarchy (VALUES > bibles > DESIGN_TREE > prompts).
+- `.gitignore` — standard ignore (OS files, editors, env, local-only drafts, large binaries).
+- `_sources/SOURCES.md` — inventory of the 7 research PDFs with copyright-status field (author action required before commercial distribution).
+- `VALUES.md` — centralized source of truth for all canonical numbers (touch, spacing, contrast, timings, breakpoints, gamification, tables, checkout, icons).
+- `LICENSE.md` — dual license (MIT for prompts/index/VALUES/README, commercial EULA for the bibles + sources).
+- `CHANGELOG.md` — Keep-a-Changelog format.
+- `prompts/PROMPT_DEEP_RESEARCH_XR.md` — 1,011-line DR prompt covering Vision Pro, Meta Quest, Android XR, WebXR, smart glasses (Ray-Ban Meta, Xreal, Samsung Galaxy Glasses, Halliday). 15 parts: hardware, spatial design, input, UI patterns, passthrough, spatial audio, motion sickness, performance, privacy, accessibility, dev frameworks, multi-user, smart glasses, emerging, anti-patterns.
+
+### Changed
+- `prompts/PROMPT_REPRISE.md` — **426 → 268 lines.** Removed all `infernal_wheel`-specific content (Dashboard.Page.ps1, port 8011, protected JS IDs). Now fully generic and reusable on any project. Project-specific variants should live in the project, not here.
+- Every existing prompt received a **`## WHEN / ## WHEN NOT / ## TRIGGER VERBAL`** block at the top, standardized across the 8 prompts. This makes discovery possible without reading the whole file.
+- `.winter-tree-stats.json` → **`stats.json`**. Renamed for clarity (the old name referenced a private tool). Content regenerated with v1.1.0 structure (explicit prompts inventory, sources status, meta files, license reference).
+- `README.md` — polished monetization-ready version (hook, badges, roadmap, dual license surfaced, VALUES.md + XR prompt referenced).
+- `COMMANDES.txt` — removed broken ref to `PROMPT_CALENDRIER_CREATIF.md`, added missing prompts, fixed stale path (`.infernal_wheel/ux_resources` → `bible-ux`), date bumped.
+
+### Removed
+- `TODO_MONETISATION.txt` **removed from public repo** (was leaking the author's business plan to potential buyers). File is preserved locally on the author's machine and now listed in `.gitignore`.
 
 ### Fixed
-- README.md: ICONS line count `307 → 306`, sections clarified `29 → 6 major (29 subsections)`, total content lines `45,888 → 45,831`, repo total added (`~49,500`).
-- COMMANDES.txt: removed broken reference to `PROMPT_CALENDRIER_CREATIF.md` (file never existed in the extracted repo). Added missing entries for WEARABLE.md, ICONS.md, PROMPT_DESIGN_AUDIT.md, PROMPT_DEEP_RESEARCH_WEARABLE.md, PROMPT_TEST_CREATIF.md. Fixed repository path (was still pointing to the original `.infernal_wheel/ux_resources/`). Date bumped to 2026-04-17.
+- README.md stats reconciled: `ICONS 307 → 306 lines`, sections clarified (`29 → 6 major / 29 subsections`), total content lines `45,888 → 45,831` → **46,133** (with VALUES.md added).
 
 ---
 

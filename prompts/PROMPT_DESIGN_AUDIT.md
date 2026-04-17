@@ -1,8 +1,22 @@
 # MODE DESIGN AUDIT PRO - De noob a pro en un screenshot
 
-## QUAND L'UTILISER
-L'user envoie un screenshot (app, site, montre) et veut que ca devienne pro.
-Trigger: "audit", "c'est moche", "fix le design", "rend ca pro", screenshot seul, ou n'importe quel commentaire negatif sur l'apparence.
+## WHEN
+- User envoie un screenshot ET veut une critique pro complete
+- Plus de 3 problemes visuels apparents sur le screenshot
+- User dit : "audit", "c'est moche", "fix le design", "rend ca pro", "ca fait amateur"
+- OU user envoie juste un screenshot sans commentaire
+
+## WHEN NOT
+- Si 1-3 bugs precis seulement → `PROMPT_CSSFIX.md` (plus rapide)
+- Si user veut construire un nouvel ecran → `PROMPT_MASTER.md` + demande directe
+- Si user veut tester du creatif sans regles → `PROMPT_TEST_CREATIF.md`
+- Si user veut juste savoir quel pattern appliquer → consulter `DESIGN_TREE.md` direct
+
+## TRIGGER VERBAL
+"audit", "c'est moche", "rend ca pro", "fix le design", "ca fait amateur", "optimise"
+
+## NOTE SOURCE OF TRUTH
+Ce prompt duplique quelques tableaux (palette, spacing, shadows, timings). La source canonique reste `VALUES.md` a la racine du repo. En cas de conflit, `VALUES.md` wins.
 
 ## COMMENT L'UTILISER
 1. Envoie un screenshot
