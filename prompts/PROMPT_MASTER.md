@@ -1,3 +1,13 @@
+---
+prompt: master
+version: 1.2.0
+updated: 2026-04-17
+authors: [sky1241, claude-opus-4-7]
+chains_from: []
+chains_to: [design-audit, cssfix, tokens-export, pick-pattern, spec-from-scratch, code-review, reprise, test-creatif, integration-deep-research]
+trigger_aliases: ["charge la bible", "mode bible", "active bible-ux"]
+---
+
 # PROMPT MASTER - bible-ux context primer
 
 ## WHEN

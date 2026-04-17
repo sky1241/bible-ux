@@ -1,3 +1,13 @@
+---
+prompt: integration-deep-research
+version: 1.1.0
+updated: 2026-04-17
+authors: [sky1241, claude-opus-4-7]
+chains_from: [master]
+chains_to: [master]
+trigger_aliases: ["integre la deep research", "integre tout", "verifie doublons"]
+---
+
 # PROMPT INTÉGRATION DEEP RESEARCH
 
 ## WHEN
@@ -165,3 +175,16 @@ Checklist avant de terminer:
 - ❌ Ajouter des règles sans valeurs concrètes
 - ❌ Mélanger Web et Mobile dans le même tableau sans distinction
 - ❌ Ignorer les sources
+
+---
+
+## Chain
+
+Après avoir exécuté ce prompt, si l'user dit :
+
+- **"go"** / **"on attaque"** → charge [`PROMPT_MASTER.md`](PROMPT_MASTER.md) pour implémenter les fixes/changes
+- **"audit complet"** → charge [`PROMPT_DESIGN_AUDIT.md`](PROMPT_DESIGN_AUDIT.md) pour critique structurée
+- **"review code"** → charge [`PROMPT_CODE_REVIEW.md`](PROMPT_CODE_REVIEW.md) sur le diff résultant
+- **"export tokens"** → charge [`PROMPT_TOKENS_EXPORT.md`](PROMPT_TOKENS_EXPORT.md) pour seed le design system
+
+Règle : un seul prompt actif. Si l'user chaîne, termine le courant d'abord.

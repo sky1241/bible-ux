@@ -3,7 +3,7 @@
   "version": "1.6.0-unreleased",
   "last_updated": "2026-04-17",
   "phase": "STABLE",
-  "total_files": 41,
+  "total_files": 47,
   "content_lines": 47021,
   "structure_version": 2,
   "content_files": {
@@ -17,7 +17,7 @@
   },
   "meta_files": {
     "README.md": 174,
-    "CHANGELOG.md": 109,
+    "CHANGELOG.md": 121,
     "LICENSE.md": 94,
     "ROADMAP.md": 97,
     "COMMANDES.md": 121,
@@ -25,21 +25,21 @@
   },
   "prompts": {
     "count": 13,
-    "total_lines": 5874,
+    "total_lines": 5319,
     "files": {
-      "PROMPT_CSSFIX.md": 106,
-      "PROMPT_DEEP_RESEARCH_MASSIVE.md": 659,
-      "PROMPT_TOKENS_EXPORT.md": 835,
-      "PROMPT_PICK_PATTERN.md": 179,
-      "PROMPT_TEST_CREATIF.md": 48,
-      "PROMPT_CODE_REVIEW.md": 208,
-      "PROMPT_MASTER.md": 139,
-      "PROMPT_DEEP_RESEARCH_WEARABLE.md": 1073,
-      "PROMPT_REPRISE.md": 268,
-      "PROMPT_DEEP_RESEARCH_XR.md": 1011,
-      "PROMPT_INTEGRATION_DEEP_RESEARCH.md": 167,
-      "PROMPT_SPEC_FROM_SCRATCH.md": 246,
-      "PROMPT_DESIGN_AUDIT.md": 935
+      "PROMPT_CSSFIX.md": 129,
+      "PROMPT_DEEP_RESEARCH_MASSIVE.md": 670,
+      "PROMPT_TOKENS_EXPORT.md": 858,
+      "PROMPT_PICK_PATTERN.md": 189,
+      "PROMPT_TEST_CREATIF.md": 58,
+      "PROMPT_CODE_REVIEW.md": 218,
+      "PROMPT_MASTER.md": 149,
+      "PROMPT_DEEP_RESEARCH_WEARABLE.md": 1084,
+      "PROMPT_REPRISE.md": 291,
+      "PROMPT_DEEP_RESEARCH_XR.md": 1022,
+      "PROMPT_INTEGRATION_DEEP_RESEARCH.md": 190,
+      "PROMPT_SPEC_FROM_SCRATCH.md": 256,
+      "PROMPT_DESIGN_AUDIT.md": 205
     },
     "router": "prompts/README.md",
     "vision": "prompts/VISION.md"

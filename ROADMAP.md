@@ -24,11 +24,11 @@ _(nothing in progress — free slot)_
 
 Priority-ordered sprints documented in [prompts/VISION.md](prompts/VISION.md):
 
-### Sprint 1 — cleanup + structure
-- [ ] Compress PROMPT_DESIGN_AUDIT.md from 935 → 300 lines (references VALUES.md + fragments)
-- [ ] Create `prompts/_fragments/` with 5 reusable fragments (7 sins, 12 axes, P0/P1 format, states coverage, chain footer)
-- [ ] Add YAML frontmatter versioning to every prompt (version, updated, chains_from, chains_to, trigger_aliases)
-- [ ] Standardize a `## Chain` block at the end of every prompt
+### Sprint 1 — cleanup + structure ✅ SHIPPED
+- [x] ~~Compress PROMPT_DESIGN_AUDIT.md from 935 → 300 lines~~ — done (935 → 205 lines, −78 %).
+- [x] ~~Create `prompts/_fragments/` with 5 reusable fragments~~ — done (7-sins, 12-axes, states-coverage, report-p0-p1, chain-footer + README).
+- [x] ~~Add YAML frontmatter versioning to every prompt~~ — done (13 prompts with version, updated, authors, chains_from, chains_to, trigger_aliases).
+- [x] ~~Standardize a `## Chain` block at the end of every prompt~~ — done (4 missing prompts got the footer; others already had explicit chain docs).
 
 ### Sprint 2 — parameters + feedback
 - [ ] Add params on DESIGN_AUDIT / CODE_REVIEW / SPEC (`audit quick`, `audit deep`, `audit a11y`, `review strict`, `review p0-only`, `spec rapide`, `spec exhaustive`)

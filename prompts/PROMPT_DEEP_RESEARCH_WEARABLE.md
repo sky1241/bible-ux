@@ -1,3 +1,14 @@
+---
+prompt: deep-research-wearable
+version: 1.1.0
+updated: 2026-04-17
+authors: [sky1241]
+destined_for: chatgpt-deep-research
+chains_from: []
+chains_to: [integration-deep-research]
+trigger_aliases: []
+---
+
 # DEEP RESEARCH PROMPT - UX WEARABLE / SMARTWATCH (~170 pages cible)
 
 ## WHEN

@@ -7,6 +7,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased] — Infra tooling + folder restructure + prompt system v1.4 + tokens export + XR bible + routing + cleanup
 
+### Added — Sprint 1 VISION (v1.7): fragments + compression + frontmatter + CHAIN
+- **`prompts/_fragments/` created** with 5 reusable fragments + README. Lever 6 of VISION.md. Each fragment is standalone, short (< 120 lines), and referenced by multiple prompts:
+  - `7-sins.md` (92 lines) — the 7 noob sins detection + fix recipe (used by DESIGN_AUDIT)
+  - `12-axes.md` (105 lines) — 12-axis technical audit grid with bible refs (used by DESIGN_AUDIT)
+  - `states-coverage.md` (65 lines) — 8 states every screen must cover with framework snippets (used by SPEC, AUDIT, CODE_REVIEW)
+  - `report-p0-p1.md` (118 lines) — P0/P1/P2/P3 bug report template (used by DESIGN_AUDIT, CODE_REVIEW)
+  - `chain-footer.md` (53 lines) — standardized CHAIN block format + global chain graph
+- **PROMPT_DESIGN_AUDIT.md compressed 935 → 205 lines (−78 %)** via fragment references. Lever 1 of VISION.md. Ready-to-copy palette/typo/spacing tables removed from the prompt since they live canonically in VALUES.md. Params documented (`audit quick`, `audit`, `audit deep`, `audit a11y`, `audit conv`). Quick Wins section added at the end of the report format.
+- **YAML frontmatter added to all 13 prompts.** Lever 2 of VISION.md. Each prompt declares `prompt`, `version`, `updated`, `authors`, `chains_from`, `chains_to`, `trigger_aliases`. Enables per-prompt CHANGELOG via git log on frontmatter.
+- **CHAIN footer standardized on all routing-capable prompts.** Lever 4 of VISION.md. 4 prompts received the footer (CSSFIX, REPRISE, TOKENS_EXPORT, INTEGRATION_DR); the others already had explicit chain documentation.
+- Net effect on prompt total: 6251 → 5319 lines (−932, −15 %) across 13 prompts + 433 lines of fragments shared across prompts.
+
 ### Added — Infra tooling (v1.6)
 - **`scripts/check-links.sh`** — walks every `.md` and verifies every `](path)` link resolves. Skips external URLs, fenced code blocks, inline backticks, and angle-bracketed placeholders. Exits 1 on broken. Runs clean now (76 links / 0 broken).
 - **`scripts/update-stats.sh`** — regenerates `stats.json` from `wc -l` on actual files. Keeps metadata stable (version, platforms, formats). Runnable locally and in CI.

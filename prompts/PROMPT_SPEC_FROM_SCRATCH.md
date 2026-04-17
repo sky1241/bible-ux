@@ -1,3 +1,13 @@
+---
+prompt: spec-from-scratch
+version: 1.1.0
+updated: 2026-04-17
+authors: [sky1241, claude-opus-4-7]
+chains_from: [master]
+chains_to: [tokens-export, master, design-audit, pick-pattern]
+trigger_aliases: ["spec mon app", "from scratch", "nouveau projet", "démarre mon app"]
+---
+
 # MODE SPEC FROM SCRATCH — "Décris ton app → spec design complète"
 
 ## WHEN

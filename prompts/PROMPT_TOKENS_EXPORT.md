@@ -1,3 +1,13 @@
+---
+prompt: tokens-export
+version: 1.1.0
+updated: 2026-04-17
+authors: [sky1241, claude-opus-4-7]
+chains_from: [master, spec-from-scratch, design-audit, code-review]
+chains_to: [master]
+trigger_aliases: ["export tokens", "seed design system", "génère les tokens"]
+---
+
 # MODE TOKENS EXPORT - Génère un design system importable depuis VALUES.md
 
 ## WHEN
@@ -833,3 +843,16 @@ Si l'user demande "export tokens avec ma couleur primaire `#3B82F6`", tu génèr
 - ❌ Inventer des couleurs de marque "par défaut" (demander)
 - ❌ Utiliser des valeurs hard-codées qui contredisent VALUES.md
 - ❌ Générer du code pour une plateforme que bible-ux ne couvre pas (Svelte 5 custom runes, etc.) sans prévenir
+
+---
+
+## Chain
+
+Après avoir exécuté ce prompt, si l'user dit :
+
+- **"go"** / **"on attaque"** → charge [`PROMPT_MASTER.md`](PROMPT_MASTER.md) pour implémenter les fixes/changes
+- **"audit complet"** → charge [`PROMPT_DESIGN_AUDIT.md`](PROMPT_DESIGN_AUDIT.md) pour critique structurée
+- **"review code"** → charge [`PROMPT_CODE_REVIEW.md`](PROMPT_CODE_REVIEW.md) sur le diff résultant
+- **"export tokens"** → charge [`PROMPT_TOKENS_EXPORT.md`](PROMPT_TOKENS_EXPORT.md) pour seed le design system
+
+Règle : un seul prompt actif. Si l'user chaîne, termine le courant d'abord.

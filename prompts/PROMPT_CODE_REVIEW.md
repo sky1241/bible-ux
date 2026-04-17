@@ -1,3 +1,13 @@
+---
+prompt: code-review
+version: 1.1.0
+updated: 2026-04-17
+authors: [sky1241, claude-opus-4-7]
+chains_from: [master, design-audit, spec-from-scratch]
+chains_to: [master, cssfix, tokens-export, spec-from-scratch]
+trigger_aliases: ["review code", "review ce diff", "audit mon code", "check ce composant"]
+---
+
 # MODE CODE REVIEW — Review un diff / PR contre les bibles
 
 ## WHEN

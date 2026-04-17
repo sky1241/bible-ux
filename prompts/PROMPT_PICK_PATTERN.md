@@ -1,3 +1,13 @@
+---
+prompt: pick-pattern
+version: 1.1.0
+updated: 2026-04-17
+authors: [sky1241, claude-opus-4-7]
+chains_from: [master, spec-from-scratch]
+chains_to: [master, design-audit, code-review]
+trigger_aliases: ["quel pattern", "quelle nav", "tab ou drawer", "help me choose"]
+---
+
 # MODE PICK PATTERN — "J'ai X → quel pattern UX ?"
 
 ## WHEN

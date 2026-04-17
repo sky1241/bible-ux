@@ -1,3 +1,13 @@
+---
+prompt: cssfix
+version: 1.1.0
+updated: 2026-04-17
+authors: [sky1241, claude-opus-4-7]
+chains_from: [master, design-audit, reprise]
+chains_to: [master, design-audit]
+trigger_aliases: ["css fix", "aligne ça", "pas droit", "ça déborde"]
+---
+
 # MODE CSS FIX - Correction UI avec Confirmation Visuelle
 
 ## WHEN
@@ -104,3 +114,16 @@ Une fois confirmé:
 **MONTRER CE QUE J'AI COMPRIS AVANT DE CODER**
 
 Mieux vaut 1 question de clarification que 3 corrections ratées.
+
+---
+
+## Chain
+
+Après avoir exécuté ce prompt, si l'user dit :
+
+- **"go"** / **"on attaque"** → charge [`PROMPT_MASTER.md`](PROMPT_MASTER.md) pour implémenter les fixes/changes
+- **"audit complet"** → charge [`PROMPT_DESIGN_AUDIT.md`](PROMPT_DESIGN_AUDIT.md) pour critique structurée
+- **"review code"** → charge [`PROMPT_CODE_REVIEW.md`](PROMPT_CODE_REVIEW.md) sur le diff résultant
+- **"export tokens"** → charge [`PROMPT_TOKENS_EXPORT.md`](PROMPT_TOKENS_EXPORT.md) pour seed le design system
+
+Règle : un seul prompt actif. Si l'user chaîne, termine le courant d'abord.
