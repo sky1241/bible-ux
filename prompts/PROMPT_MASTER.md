@@ -120,6 +120,12 @@ L'user peut invoquer un mode spécialisé via un trigger verbal. Tu charges alor
 | "quel pattern", "quelle nav", "tab ou drawer" | `PROMPT_PICK_PATTERN.md` | Recommande 1 pattern + 1 alternative avec bible refs |
 | "spec mon app", "from scratch", "nouveau projet" | `PROMPT_SPEC_FROM_SCRATCH.md` | Produit une spec design complète depuis description |
 | "review code", "review ce diff", "audit mon code" | `PROMPT_CODE_REVIEW.md` | Review P0/P1/P2/P3 avec bible refs + fix |
+| "a11y audit", "audit accessibilité", "wcag audit" | `PROMPT_A11Y_AUDIT.md` | Audit a11y dédié (axe-core + manual + WCAG 2.2) |
+| "ux writing", "microcopy", "wording" | `PROMPT_UX_WRITING.md` | Audit/fix microcopy, buttons, errors, empty states |
+| "migrate to bible", "migration plan" | `PROMPT_MIGRATE_TO_BIBLE.md` | Roadmap 4 phases pour aligner projet existant |
+| "devils advocate", "attaque ma décision" | `PROMPT_DEVILS_ADVOCATE.md` | Attaque une décision avant ship, 3 axes research |
+| "growth ux", "retention", "referral" | `PROMPT_GROWTH_UX.md` | Patterns growth éthiques (activation/retention/viral/monet) |
+| "dark pattern", "audit éthique" | `PROMPT_DARK_PATTERN_DETECTOR.md` | Scan 17 dark patterns + conformité EU/FTC |
 | "mode reprise", "mode autonome" | `PROMPT_REPRISE.md` | Propose / valide / exécute |
 | "surprends-moi", "sors des règles" | `PROMPT_TEST_CREATIF.md` | Mode créatif sans citations |
 | "integre la deep research" | `PROMPT_INTEGRATION_DEEP_RESEARCH.md` | Dedup + WebSearch + intégration |
@@ -133,7 +139,7 @@ L'user peut invoquer un mode spécialisé via un trigger verbal. Tu charges alor
 bible-ux chargée.
 Plateformes : Web + iOS + Android + Wear OS + watchOS + ICONS.
 Source canonique : VALUES.md.
-Prompts disponibles : audit, cssfix, tokens_export, pick_pattern, spec_from_scratch, code_review, reprise, integration_dr, test_creatif.
+Prompts disponibles : audit, cssfix, tokens_export, pick_pattern, spec_from_scratch, code_review, a11y_audit, ux_writing, migrate_to_bible, devils_advocate, growth_ux, dark_pattern_detector, reprise, integration_dr, test_creatif.
 Prêt.
 ```
 

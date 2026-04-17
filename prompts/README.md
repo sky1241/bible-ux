@@ -44,6 +44,12 @@
 | Choisir un pattern UX (tab/drawer, modal/sheet, infinite/pagination, ...) | [PROMPT_PICK_PATTERN.md](PROMPT_PICK_PATTERN.md) | "quel pattern", "quelle nav", "tab ou drawer", "help me choose" | ~210 |
 | Démarrer un nouveau projet greenfield (décris app → spec complète) | [PROMPT_SPEC_FROM_SCRATCH.md](PROMPT_SPEC_FROM_SCRATCH.md) | "spec mon app", "from scratch", "nouveau projet" | ~240 |
 | Reviewer un diff / PR / snippet contre les bibles | [PROMPT_CODE_REVIEW.md](PROMPT_CODE_REVIEW.md) | "review code", "review ce diff", "audit mon code" | ~280 |
+| Audit accessibilité WCAG 2.2 AA/AAA dédié | [PROMPT_A11Y_AUDIT.md](PROMPT_A11Y_AUDIT.md) | "a11y audit", "audit accessibilité", "wcag audit" | ~200 |
+| Microcopy / wording / ton de la marque | [PROMPT_UX_WRITING.md](PROMPT_UX_WRITING.md) | "ux writing", "microcopy", "relis mon wording" | ~240 |
+| Plan de migration d'un projet existant vers bible-ux | [PROMPT_MIGRATE_TO_BIBLE.md](PROMPT_MIGRATE_TO_BIBLE.md) | "migrate to bible", "migration plan", "aligne mon projet" | ~190 |
+| Attaquer une décision design avant ship (devil's advocate) | [PROMPT_DEVILS_ADVOCATE.md](PROMPT_DEVILS_ADVOCATE.md) | "devils advocate", "attaque ma décision", "challenge this" | ~180 |
+| Growth UX éthique (activation / retention / referral / monetization) | [PROMPT_GROWTH_UX.md](PROMPT_GROWTH_UX.md) | "growth ux", "retention", "referral", "onboarding conversion" | ~230 |
+| Détecter dark patterns dans un flow | [PROMPT_DARK_PATTERN_DETECTOR.md](PROMPT_DARK_PATTERN_DETECTOR.md) | "dark pattern", "audit éthique", "ethical audit" | ~260 |
 | Je reprends après pause, je suis crevé, Claude propose, je valide | [PROMPT_REPRISE.md](PROMPT_REPRISE.md) | "mode reprise", "mode autonome" | 426 |
 | Je veux du créatif pur, sans citation de règles | [PROMPT_TEST_CREATIF.md](PROMPT_TEST_CREATIF.md) | "surprends-moi", "sors des règles" | 30 |
 | J'ai les résultats d'une Deep Research ChatGPT à intégrer | [PROMPT_INTEGRATION_DEEP_RESEARCH.md](PROMPT_INTEGRATION_DEEP_RESEARCH.md) | "integre la deep research" | 154 |

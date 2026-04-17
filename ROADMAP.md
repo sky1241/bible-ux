@@ -38,13 +38,13 @@ Priority-ordered sprints documented in [prompts/VISION.md](prompts/VISION.md):
 - [ ] Convention `.bible-ux/project.json` loaded by PROMPT_MASTER on startup (stack, targets, brand, a11y level)
 - [ ] `PROMPT_META_AUDIT.md` scans bibles for contradictions, stale values, broken cross-refs, dead URLs. Quarterly run.
 
-### Sprint 4 — coverage extensions
-- [ ] `PROMPT_A11Y_AUDIT.md` — dedicated a11y audit (axe-core rules + manual pass)
-- [ ] `PROMPT_UX_WRITING.md` — microcopy / ton / button labels
-- [ ] `PROMPT_MIGRATE_TO_BIBLE.md` — audit existing project and produce migration plan
-- [ ] `PROMPT_DEVILS_ADVOCATE.md` — attack a design decision before it ships
-- [ ] `PROMPT_GROWTH_UX.md` — ethical growth patterns (onboarding, referral, retention)
-- [ ] `PROMPT_DARK_PATTERN_DETECTOR.md` — flag dark patterns in a flow
+### Sprint 4 — coverage extensions ✅ SHIPPED
+- [x] ~~`PROMPT_A11Y_AUDIT.md`~~ — done (~200 lines, WCAG 2.2 AA/AAA with automated + manual + params for cognitive/mobile/xr).
+- [x] ~~`PROMPT_UX_WRITING.md`~~ — done (~240 lines, 8 writing rules + tone guide + i18n prep).
+- [x] ~~`PROMPT_MIGRATE_TO_BIBLE.md`~~ — done (~190 lines, 4-phase plan with effort estimates).
+- [x] ~~`PROMPT_DEVILS_ADVOCATE.md`~~ — done (~180 lines, 3-axis attack: research / anti-patterns / edge cases).
+- [x] ~~`PROMPT_GROWTH_UX.md`~~ — done (~230 lines, 4 pillars: activation / retention / referral / monetization, all ethical).
+- [x] ~~`PROMPT_DARK_PATTERN_DETECTOR.md`~~ — done (~260 lines, 17-pattern scan with EU/FTC compliance check).
 
 ### Copyright & legal (do before any paid distribution)
 - [ ] **Review `_sources/*.pdf` copyright status** — see [_sources/SOURCES.md](_sources/SOURCES.md). For each PDF: identify origin, verify license, keep / replace-with-URL-citation / delete. Any third-party copyrighted content must be removed before commercial sale on Gumroad / Product Hunt / HN.

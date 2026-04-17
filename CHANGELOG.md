@@ -7,6 +7,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased] — Infra tooling + folder restructure + prompt system v1.4 + tokens export + XR bible + routing + cleanup
 
+### Added — Sprint 4 VISION (v1.8): 6 coverage prompts
+
+Six new prompts shipped in one batch, each following the v1.4 standard (WHEN / WHEN NOT / TRIGGER / PARAMS / frontmatter YAML / CHAIN footer):
+
+- **`prompts/PROMPT_A11Y_AUDIT.md`** (~200 lines) — dedicated WCAG 2.2 audit. Automated grid (13 axe-core rules) + manual checks (keyboard, screen reader VoiceOver/NVDA/TalkBack, cognitive, platform specific). Bug severity matrix P0/P1/P2/P3 with compliance score. Params: `quick`, `aaa`, `cognitive`, `mobile`, `xr`. Referenced bibles § F/AQ/BK/BR + VALUES contrast/focus/touch.
+- **`prompts/PROMPT_UX_WRITING.md`** (~240 lines) — microcopy audit/fix. 8 rules (buttons as action verbs, error formula "quoi+pourquoi+comment", empty states encouraging, success short, tooltips ≤1 line, push notif titles ≤50 chars, onboarding 1-idea-per-screen, placeholder ≠ label) + tone matrix by audience + i18n prep (text expansion 30%, RTL, plurals, variables). Params: `quick`, `tone`, `i18n`.
+- **`prompts/PROMPT_MIGRATE_TO_BIBLE.md`** (~190 lines) — migration plan from existing project to bible-ux alignment. 5-dimension gap analysis (tokens, components, states coverage, a11y, wording). 4-phase roadmap (Foundation, Core Components, States Coverage, A11y + Polish) with effort estimates per phase. Params: `quick`, `aggressive`, `minimum`.
+- **`prompts/PROMPT_DEVILS_ADVOCATE.md`** (~180 lines) — attacks a design decision BEFORE ship. 3-axis attack (research contre from NN/g/Baymard/CHI, anti-patterns bible-ux, 5+ edge cases). Proposes 1 credible alternative. Verdict clear (risked/defendable/tenable). Concedes if user argues back with evidence. Real examples included.
+- **`prompts/PROMPT_GROWTH_UX.md`** (~230 lines) — ethical growth patterns. 4 pillars (activation "time-to-value <60s", retention "streaks +3.6x retention guardrails", referral "K-factor timing", monetization "paywall timing"). Cross-links to DARK_PATTERN_DETECTOR for the ethical line. Params: `onboarding`, `retention`, `referral`, `monetization`, `ethics`.
+- **`prompts/PROMPT_DARK_PATTERN_DETECTOR.md`** (~260 lines) — scans 17 Brignull-taxonomy dark patterns (confirmshaming, misdirection, sneak into basket, hidden costs, forced continuity, roach motel, privacy Zuckering, fake scarcity/urgency/social proof, nagging, obstruction, forced action…). Checks EU Dark Patterns in Subscriptions Act 2024 + FTC 2022 compliance. Params: `quick`, `subscription`, `consent`.
+
+Router + MASTER updated:
+- `prompts/README.md` routing table extended with 6 new rows
+- `prompts/PROMPT_MASTER.md` routing table + initialization message updated (15 prompts announced total)
+
+Net effect:
+- Prompts total: 13 → 19 (+6)
+- Prompt lines: 5319 → 6823 (+1504 for 6 new prompts)
+- 177 links checked, 0 broken
+- stats.json regenerated via update-stats.sh (53 total files)
+
+ROADMAP: Sprint 4 of VISION.md fully shipped. Remaining on roadmap: Sprint 2 (parameters — partially done inline, explicit feedback protocol TBD), Sprint 3 (project memory + self-audit meta-prompt), Long-term DR extensions (pricing, AAA a11y, enterprise, gaming).
+
+---
+
 ### Added — Sprint 1 VISION (v1.7): fragments + compression + frontmatter + CHAIN
 - **`prompts/_fragments/` created** with 5 reusable fragments + README. Lever 6 of VISION.md. Each fragment is standalone, short (< 120 lines), and referenced by multiple prompts:
   - `7-sins.md` (92 lines) — the 7 noob sins detection + fix recipe (used by DESIGN_AUDIT)
