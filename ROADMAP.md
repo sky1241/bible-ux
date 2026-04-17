@@ -8,6 +8,7 @@ Current version: **1.2.0-unreleased** (see [stats.json](stats.json)).
 
 ## Recently shipped (unreleased)
 
+- [x] **PROMPT_TOKENS_EXPORT.md** — killer feature shipped. 835-line prompt covering 8 export formats: CSS custom properties, Tailwind config, Flutter ThemeData, SwiftUI theme, iOS UIKit, Kotlin Compose, Android XML (dimens / integers / styles), Figma Tokens JSON (Tokens Studio). Transforms VALUES.md from "doc to read" into "config to import" — the jump that justifies the $49 Gumroad price.
 - [x] **XR.md** — 4th platform bible (Vision Pro, Meta Quest, Samsung Galaxy XR, Pico, Vive, Varjo, PSVR2, smart glasses Ray-Ban Meta / XREAL / VITURE / Rokid / RayNeo / Halliday / Snap). 842 lines, 14 sections (A → N), 54 subsections. Sourced from ChatGPT Deep Research baseline 2026-04-17 with 76 primary citations. Cross-referenced from [MOBILE.md § CJ](MOBILE.md).
 
 ## Now — in progress
@@ -16,8 +17,7 @@ _(nothing in progress — free slot)_
 
 ## Next — priority 1 (monetization-critical)
 
-### New prompts to fill the routing gaps
-- [ ] **PROMPT_TOKENS_EXPORT.md** — killer feature. Turns VALUES.md into executable config: CSS variables, Tailwind config, Flutter ThemeData, SwiftUI theme, Kotlin Compose theme, Figma tokens JSON. This is what justifies the $49 Gumroad price because it transforms "doc to read" into "config to import".
+### Remaining prompts to fill the routing gaps
 - [ ] **PROMPT_SPEC_FROM_SCRATCH.md** — "describe your app in 2 sentences → full design spec output". Targets greenfield projects, not just "fix the existing ugly thing".
 - [ ] **PROMPT_PICK_PATTERN.md** — "I have X destinations, Y users, Z constraints → which pattern from DESIGN_TREE?". Exploits the underused decision tree.
 - [ ] **PROMPT_CODE_REVIEW.md** — review a diff / PR against the bibles (code-level, not screenshot-level).

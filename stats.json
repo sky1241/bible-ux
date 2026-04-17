@@ -1,9 +1,9 @@
 {
   "repo": "bible-ux",
-  "version": "1.2.0-unreleased",
+  "version": "1.3.0-unreleased",
   "last_updated": "2026-04-17",
   "phase": "STABLE",
-  "total_files": 31,
+  "total_files": 32,
   "content_lines": 47021,
   "content_files": {
     "WEB.md": 15669,
@@ -16,19 +16,20 @@
   },
   "meta_files": {
     "README.md": 162,
-    "CHANGELOG.md": 80,
+    "CHANGELOG.md": 82,
     "LICENSE.md": 94,
     "ROADMAP.md": 66,
     "COMMANDES.txt": 142,
     "stats.json": "self"
   },
   "prompts": {
-    "count": 9,
-    "total_lines": 4486,
+    "count": 10,
+    "total_lines": 5323,
     "files": {
-      "PROMPT_MASTER.md": 135,
+      "PROMPT_MASTER.md": 136,
       "PROMPT_DESIGN_AUDIT.md": 935,
       "PROMPT_CSSFIX.md": 106,
+      "PROMPT_TOKENS_EXPORT.md": 835,
       "PROMPT_REPRISE.md": 268,
       "PROMPT_TEST_CREATIF.md": 48,
       "PROMPT_INTEGRATION_DEEP_RESEARCH.md": 167,
@@ -63,6 +64,16 @@
     "Horizon OS (Meta Quest)",
     "Android XR (Samsung Galaxy XR)",
     "Smart glasses (Ray-Ban Meta, XREAL, VITURE, Rokid, RayNeo, Halliday, Snap Spectacles)"
+  ],
+  "export_formats": [
+    "CSS custom properties",
+    "Tailwind config",
+    "Flutter ThemeData",
+    "SwiftUI theme",
+    "iOS UIKit",
+    "Kotlin Compose theme",
+    "Android XML resources",
+    "Figma Tokens JSON"
   ],
   "license": "dual (MIT + commercial EULA)",
   "license_file": "LICENSE.md"

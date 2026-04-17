@@ -20,15 +20,15 @@
       ▼                         ▼                         ▼                    ▼
  PROMPT_MASTER          ┌───────┴────────┐      ┌─────────┴──────────┐    PROMPT_TEST_
  (coller au début)      │                │      │                    │      CREATIF
-                     Bug  CSS        Audit pro       Lancer             Intégrer
-                   aligné/         depuis          une DR           résultats
-                   overflow        screenshot      ChatGPT           ChatGPT
-                       │                │              │                  │
-                       ▼                ▼              ▼                  ▼
-                   PROMPT_         PROMPT_       PROMPT_DEEP_       PROMPT_
-                   CSSFIX         DESIGN_       RESEARCH_*         INTEGRATION_
-                                  AUDIT         (MASSIVE,          DEEP_RESEARCH
-                                                WEARABLE, XR)
+                     Bug  CSS        Audit pro    Export tokens     Lancer              Intégrer
+                   aligné/         depuis         (CSS/Flutter/     une DR             résultats
+                   overflow        screenshot      SwiftUI...)      ChatGPT             ChatGPT
+                       │                │              │                │                 │
+                       ▼                ▼              ▼                ▼                 ▼
+                   PROMPT_         PROMPT_       PROMPT_          PROMPT_DEEP_        PROMPT_
+                   CSSFIX         DESIGN_       TOKENS_           RESEARCH_*         INTEGRATION_
+                                  AUDIT         EXPORT           (MASSIVE,           DEEP_RESEARCH
+                                                                  WEARABLE, XR)
 ```
 
 ---
@@ -40,6 +40,7 @@
 | Nouvelle session Claude/GPT, je veux qu'il connaisse la bible | [PROMPT_MASTER.md](PROMPT_MASTER.md) | "charge la bible", "mode bible" | ~200 |
 | Screenshot → "c'est moche, rend ça pro" | [PROMPT_DESIGN_AUDIT.md](PROMPT_DESIGN_AUDIT.md) | "audit", "c'est moche", "fix le design" | 921 |
 | Bug visuel précis : alignement, spacing, overflow | [PROMPT_CSSFIX.md](PROMPT_CSSFIX.md) | "css fix", "pas droit", "aligne ça" | 96 |
+| Exporter VALUES.md en tokens CSS / Tailwind / Flutter / SwiftUI / Compose / Android XML / Figma | [PROMPT_TOKENS_EXPORT.md](PROMPT_TOKENS_EXPORT.md) | "export tokens", "génère les tokens [format]", "seed design system" | ~480 |
 | Je reprends après pause, je suis crevé, Claude propose, je valide | [PROMPT_REPRISE.md](PROMPT_REPRISE.md) | "mode reprise", "mode autonome" | 426 |
 | Je veux du créatif pur, sans citation de règles | [PROMPT_TEST_CREATIF.md](PROMPT_TEST_CREATIF.md) | "surprends-moi", "sors des règles" | 30 |
 | J'ai les résultats d'une Deep Research ChatGPT à intégrer | [PROMPT_INTEGRATION_DEEP_RESEARCH.md](PROMPT_INTEGRATION_DEEP_RESEARCH.md) | "integre la deep research" | 154 |
