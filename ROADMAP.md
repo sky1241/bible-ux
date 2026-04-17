@@ -30,13 +30,14 @@ Priority-ordered sprints documented in [prompts/VISION.md](prompts/VISION.md):
 - [x] ~~Add YAML frontmatter versioning to every prompt~~ — done (13 prompts with version, updated, authors, chains_from, chains_to, trigger_aliases).
 - [x] ~~Standardize a `## Chain` block at the end of every prompt~~ — done (4 missing prompts got the footer; others already had explicit chain docs).
 
-### Sprint 2 — parameters + feedback
-- [ ] Add params on DESIGN_AUDIT / CODE_REVIEW / SPEC (`audit quick`, `audit deep`, `audit a11y`, `review strict`, `review p0-only`, `spec rapide`, `spec exhaustive`)
-- [ ] `prompts/FEEDBACK.md` + protocol for ✓/✗ logging after each prompt run
+### Sprint 2 — parameters + feedback ✅ SHIPPED
+- [x] ~~Params on DESIGN_AUDIT / CODE_REVIEW / SPEC~~ — done inline (every v1.4+ prompt has `## PARAMS` section).
+- [x] ~~`prompts/FEEDBACK.md` protocol~~ — done (manual-logging format, weekly/monthly/quarterly cadence, no magic automation).
 
-### Sprint 3 — project memory + self-audit
-- [ ] Convention `.bible-ux/project.json` loaded by PROMPT_MASTER on startup (stack, targets, brand, a11y level)
-- [ ] `PROMPT_META_AUDIT.md` scans bibles for contradictions, stale values, broken cross-refs, dead URLs. Quarterly run.
+### Sprint 3 — project memory + self-audit ✅ SHIPPED
+- [x] ~~`.bible-ux/project.json` convention~~ — documented in [prompts/PROJECT_MEMORY.md](prompts/PROJECT_MEMORY.md) with full schema, load protocol, infernal_wheel example.
+- [x] ~~`PROMPT_META_AUDIT.md`~~ — done (~220 lines, scans links + contradictions + stale + dead URLs + orphans).
+- [x] ~~First meta audit run~~ — done, see [META_AUDIT_REPORT.md](META_AUDIT_REPORT.md). Verdict: 🟢 CLEAN, no blockers.
 
 ### Sprint 4 — coverage extensions ✅ SHIPPED
 - [x] ~~`PROMPT_A11Y_AUDIT.md`~~ — done (~200 lines, WCAG 2.2 AA/AAA with automated + manual + params for cognitive/mobile/xr).
@@ -61,14 +62,14 @@ Priority-ordered sprints documented in [prompts/VISION.md](prompts/VISION.md):
 
 ## Mid-term — priority 3 (structural)
 
-- [x] ~~Restructure folders to `bibles/`~~ — **done** (the 5 bibles moved into `bibles/`). Further nesting (`meta/` for DESIGN_TREE + VALUES + stats, `_sources/` deeper, etc.) is **not needed** — current structure is clean enough.
-- [ ] **`scripts/build-index.js`** — auto-generate DESIGN_TREE.md indexes from the bibles' `##` headings. Today the index is maintained by hand → drift is guaranteed as bibles evolve.
-- [ ] **`scripts/update-stats.js`** — auto-regenerate stats.json from `wc -l` on the content files. Runs in CI.
-- [ ] **`scripts/check-links.sh`** — walks all `.md` files and verifies every `](path)` resolves. Run locally + in CI.
-- [ ] **`.github/workflows/ci.yml`** — link checker, markdown lint, stats regen on push. Signals "actively maintained" to potential buyers.
-- [ ] **`prompts/_fragments/`** — extract the reusable chunks (the 7 sins, 12 axes, P0/P1 format, states checklist, chain footer) so prompts can reference fragments instead of duplicating (VISION.md lever 6).
-- [ ] **Visual examples gallery** (`examples/`) — each example = screenshot before + screenshot after + the exact section of the bible that drove the change. 10-15 high-impact pairs.
-- [ ] **Badge SVG auto-generated** — current README badges are static. Script to regen from stats.json so they stay accurate.
+- [x] ~~Restructure folders to `bibles/`~~ — **done** (the 5 bibles moved into `bibles/`).
+- [x] ~~`scripts/build-index.sh`~~ — done (Bash not JS, auto-generates DESIGN_TREE index block between markers).
+- [x] ~~`scripts/update-stats.sh`~~ — done (regenerates stats.json from wc -l).
+- [x] ~~`scripts/check-links.sh`~~ — done (180 links checked, 0 broken).
+- [x] ~~`scripts/update-badges.sh`~~ — done (regenerates README badges from stats.json).
+- [x] ~~`.github/workflows/ci.yml`~~ — done (check-links + check-stats-fresh + markdown-lint).
+- [x] ~~`prompts/_fragments/`~~ — done (5 fragments: 7-sins, 12-axes, states-coverage, report-p0-p1, chain-footer).
+- [ ] **Visual examples gallery** (`examples/`) — each example = screenshot before + screenshot after + the exact section of the bible that drove the change. 10-15 high-impact pairs. **Needs author (requires real project screenshots).**
 
 ## Long-term — priority 4 (expansion)
 

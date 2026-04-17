@@ -60,7 +60,7 @@ total_files=$(find . -type f \
 cat > stats.json <<EOF
 {
   "repo": "bible-ux",
-  "version": "1.6.0-unreleased",
+  "version": "1.9.0-unreleased",
   "last_updated": "$today",
   "phase": "STABLE",
   "total_files": $total_files,

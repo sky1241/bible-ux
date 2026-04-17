@@ -3,10 +3,13 @@
 > **45,000+ lines of sourced UX rules across Web, Mobile, Wearable — ready to drop into any project so your AI assistant designs like a senior.**
 > Built from 2024–2026 research (Apple HIG, Material 3, WCAG 2.2, NN/g, Baymard, AppTweak, SplitMetrics). Every rule has concrete values. Every value has a source.
 
-[![Content](https://img.shields.io/badge/lines-45%2C831-blue)]()
-[![Sections](https://img.shields.io/badge/sections-317-green)]()
+<!-- BADGES_START -->
+[![Content](https://img.shields.io/badge/lines-47021-blue)]()
+[![Sections](https://img.shields.io/badge/sections-331-green)]()
+[![Version](https://img.shields.io/badge/version-1.9.0-unreleased-orange)]()
 [![Freshness](https://img.shields.io/badge/fresh-2024--2026-orange)]()
 [![License](https://img.shields.io/badge/license-dual%20MIT%20%2B%20EULA-lightgrey)](LICENSE.md)
+<!-- BADGES_END -->
 
 ---
 

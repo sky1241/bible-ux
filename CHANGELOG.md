@@ -7,6 +7,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased] — Infra tooling + folder restructure + prompt system v1.4 + tokens export + XR bible + routing + cleanup
 
+### Added — Sprint 2 + 3 VISION (v1.9): feedback protocol, meta audit, project memory, 2 more scripts
+
+**Sprint 2 — parameters + feedback (fully shipped):**
+- `prompts/FEEDBACK.md` — manual-logging feedback protocol. After each prompt run the user can log a ✓ or ✗ entry in 1 line. Weekly glance / monthly batch / quarterly patches cadence. Not magic — deliberately manual to keep friction low.
+- Params already present inline on every v1.4+ prompt (`## PARAMS` section).
+
+**Sprint 3 — project memory + self-audit (fully shipped):**
+- `prompts/PROMPT_META_AUDIT.md` (~220 lines) — scans bible-ux for internal coherence (cross-refs, stale versions, contradictions vs VALUES.md, dead URLs, orphan sections). Params: `quick`, `deep`, `section [X]`. Quarterly run recommended.
+- `prompts/PROJECT_MEMORY.md` — convention document for `.bible-ux/project.json`. Full schema covering targets, stack, brand, a11y level, i18n, compliance, monetization, project-specific prompts, local server config. PROMPT_MASTER reads it on startup to skip discovery questions. Example for infernal_wheel included (20 protected JS IDs preserved).
+- `META_AUDIT_REPORT.md` — first real meta audit ran against the current repo. Verdict: 🟢 CLEAN, 0 blockers. 180 links / 0 broken. Touch / contrast / animation / spacing consistent across all bibles. 5 iOS 15+/14+ mentions in MOBILE.md confirmed as historical-API notes (not stale). 761 external URLs not scanned (deep run TBD before commercial launch).
+
+**Infra (completing VISION mid-term priorities):**
+- `scripts/build-index.sh` — regenerates DESIGN_TREE.md section index block (between `<!-- BIBLE_INDEX_START -->` / `_END -->` markers) from bibles' `##` headings. Solves drift between DESIGN_TREE and actual bible contents.
+- `scripts/update-badges.sh` — regenerates README shields.io badges from stats.json. Wraps badges between `<!-- BADGES_START -->` / `_END -->` markers. Values no longer stale (47,021 lines, 331 sections, version 1.9.0).
+- stats.json version bumped `1.6.0-unreleased` → `1.9.0-unreleased` in `update-stats.sh`.
+
+**Other:**
+- `_sources/SOURCES.md` updated — PDFs confirmed as free-access online resources (author clarification 2026-04-17). No longer blocked for commercial distribution. Editorial work on bibles remains under EULA; PDFs are reference material.
+
+---
+
 ### Added — Sprint 4 VISION (v1.8): 6 coverage prompts
 
 Six new prompts shipped in one batch, each following the v1.4 standard (WHEN / WHEN NOT / TRIGGER / PARAMS / frontmatter YAML / CHAIN footer):

@@ -126,6 +126,7 @@ L'user peut invoquer un mode spécialisé via un trigger verbal. Tu charges alor
 | "devils advocate", "attaque ma décision" | `PROMPT_DEVILS_ADVOCATE.md` | Attaque une décision avant ship, 3 axes research |
 | "growth ux", "retention", "referral" | `PROMPT_GROWTH_UX.md` | Patterns growth éthiques (activation/retention/viral/monet) |
 | "dark pattern", "audit éthique" | `PROMPT_DARK_PATTERN_DETECTOR.md` | Scan 17 dark patterns + conformité EU/FTC |
+| "meta audit", "audit la bible" | `PROMPT_META_AUDIT.md` | Audit interne bible-ux (cohérence, stale, dead links) |
 | "mode reprise", "mode autonome" | `PROMPT_REPRISE.md` | Propose / valide / exécute |
 | "surprends-moi", "sors des règles" | `PROMPT_TEST_CREATIF.md` | Mode créatif sans citations |
 | "integre la deep research" | `PROMPT_INTEGRATION_DEEP_RESEARCH.md` | Dedup + WebSearch + intégration |
@@ -139,7 +140,7 @@ L'user peut invoquer un mode spécialisé via un trigger verbal. Tu charges alor
 bible-ux chargée.
 Plateformes : Web + iOS + Android + Wear OS + watchOS + ICONS.
 Source canonique : VALUES.md.
-Prompts disponibles : audit, cssfix, tokens_export, pick_pattern, spec_from_scratch, code_review, a11y_audit, ux_writing, migrate_to_bible, devils_advocate, growth_ux, dark_pattern_detector, reprise, integration_dr, test_creatif.
+Prompts disponibles : audit, cssfix, tokens_export, pick_pattern, spec_from_scratch, code_review, a11y_audit, ux_writing, migrate_to_bible, devils_advocate, growth_ux, dark_pattern_detector, meta_audit, reprise, integration_dr, test_creatif.
 Prêt.
 ```
 

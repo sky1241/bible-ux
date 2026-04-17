@@ -50,6 +50,7 @@
 | Attaquer une décision design avant ship (devil's advocate) | [PROMPT_DEVILS_ADVOCATE.md](PROMPT_DEVILS_ADVOCATE.md) | "devils advocate", "attaque ma décision", "challenge this" | ~180 |
 | Growth UX éthique (activation / retention / referral / monetization) | [PROMPT_GROWTH_UX.md](PROMPT_GROWTH_UX.md) | "growth ux", "retention", "referral", "onboarding conversion" | ~230 |
 | Détecter dark patterns dans un flow | [PROMPT_DARK_PATTERN_DETECTOR.md](PROMPT_DARK_PATTERN_DETECTOR.md) | "dark pattern", "audit éthique", "ethical audit" | ~260 |
+| Audit bible-ux elle-même (cohérence interne, stale values, dead URLs) | [PROMPT_META_AUDIT.md](PROMPT_META_AUDIT.md) | "meta audit", "audit la bible", "scan bible-ux" | ~220 |
 | Je reprends après pause, je suis crevé, Claude propose, je valide | [PROMPT_REPRISE.md](PROMPT_REPRISE.md) | "mode reprise", "mode autonome" | 426 |
 | Je veux du créatif pur, sans citation de règles | [PROMPT_TEST_CREATIF.md](PROMPT_TEST_CREATIF.md) | "surprends-moi", "sors des règles" | 30 |
 | J'ai les résultats d'une Deep Research ChatGPT à intégrer | [PROMPT_INTEGRATION_DEEP_RESEARCH.md](PROMPT_INTEGRATION_DEEP_RESEARCH.md) | "integre la deep research" | 154 |
