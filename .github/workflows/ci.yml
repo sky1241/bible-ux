@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    name: Check internal links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make script executable
+        run: chmod +x scripts/check-links.sh
+      - name: Run link checker
+        run: ./scripts/check-links.sh
+
+  check-stats-fresh:
+    name: Check stats.json is up to date
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make script executable
+        run: chmod +x scripts/update-stats.sh
+      - name: Regenerate stats.json
+        run: ./scripts/update-stats.sh
+      - name: Verify no drift
+        run: |
+          if ! git diff --exit-code stats.json; then
+            echo "::error::stats.json is stale. Run ./scripts/update-stats.sh locally and commit."
+            exit 1
+          fi
+
+  markdown-lint:
+    name: Markdown lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: |
+            **/*.md
+            !node_modules
+            !.git
+        continue-on-error: true
+        # Note: continue-on-error because historical bibles may have
+        # formatting quirks that were intentional. Tighten later once
+        # bibles are curated.

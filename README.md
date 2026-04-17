@@ -92,7 +92,7 @@ bible-ux/
   CHANGELOG.md                    # Version history (Keep a Changelog)
   LICENSE.md                      # Dual license (MIT + commercial EULA)
   ROADMAP.md                      # Planned work, priority-ordered
-  COMMANDES.txt                   # French command cheat-sheet
+  COMMANDES.md                   # French command cheat-sheet
   stats.json                      # Repo metadata snapshot
   .gitignore
 ```
@@ -164,7 +164,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the full history. Current version: **1.0.0*
 
 | Part | License | Summary |
 |------|---------|---------|
-| `prompts/**`, `DESIGN_TREE.md`, `VALUES.md`, `COMMANDES.txt`, `README*.md`, `CHANGELOG.md`, `stats.json` | **MIT** | Free to use, fork, modify, redistribute. |
+| `prompts/**`, `DESIGN_TREE.md`, `VALUES.md`, `COMMANDES.md`, `README*.md`, `CHANGELOG.md`, `stats.json` | **MIT** | Free to use, fork, modify, redistribute. |
 | `bibles/WEB.md`, `bibles/MOBILE.md`, `bibles/WEARABLE.md`, `bibles/ICONS.md`, `_sources/**` | **Commercial EULA** | Personal use only. No redistribution. Paid licenses available. |
 
 Commercial licenses available on request (open a GitHub issue or email the author).

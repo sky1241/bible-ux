@@ -4,7 +4,7 @@ This repository uses a **dual license** structure:
 
 | Part of the repo | License | Use |
 |------------------|---------|-----|
-| `prompts/**`, `DESIGN_TREE.md`, `VALUES.md`, `COMMANDES.txt`, `README*.md`, `CHANGELOG.md`, `ROADMAP.md`, `stats.json`, `.gitignore` | **MIT** (see below) | Free to use, fork, modify, redistribute. |
+| `prompts/**`, `DESIGN_TREE.md`, `VALUES.md`, `COMMANDES.md`, `README*.md`, `CHANGELOG.md`, `ROADMAP.md`, `stats.json`, `.gitignore` | **MIT** (see below) | Free to use, fork, modify, redistribute. |
 | `bibles/WEB.md`, `bibles/MOBILE.md`, `bibles/WEARABLE.md`, `bibles/XR.md`, `bibles/ICONS.md`, `_sources/**` | **Commercial EULA** (see below) | Personal use only. No redistribution. Paid licenses available. |
 
 The bibles (`bibles/WEB.md`, `bibles/MOBILE.md`, `bibles/WEARABLE.md`, `bibles/XR.md`, `bibles/ICONS.md`) and the source PDFs are the commercial product. Everything else (prompts, workflow files, index) is free and meant to be copied.

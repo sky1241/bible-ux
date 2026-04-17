@@ -5,7 +5,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
-## [Unreleased] — Folder restructure + prompt system v1.4 + tokens export + XR bible + routing + cleanup
+## [Unreleased] — Infra tooling + folder restructure + prompt system v1.4 + tokens export + XR bible + routing + cleanup
+
+### Added — Infra tooling (v1.6)
+- **`scripts/check-links.sh`** — walks every `.md` and verifies every `](path)` link resolves. Skips external URLs, fenced code blocks, inline backticks, and angle-bracketed placeholders. Exits 1 on broken. Runs clean now (76 links / 0 broken).
+- **`scripts/update-stats.sh`** — regenerates `stats.json` from `wc -l` on actual files. Keeps metadata stable (version, platforms, formats). Runnable locally and in CI.
+- **`.github/workflows/ci.yml`** — GitHub Actions workflow with 3 jobs: `check-links` (fails on broken link), `check-stats-fresh` (fails if stats.json drifts from reality), `markdown-lint` (soft for now, to be tightened once bibles curated).
+- **Fixed** two legitimate broken links in `bibles/XR.md` (`](VALUES.md)` → `](../VALUES.md)`, same for DESIGN_TREE.md) discovered by the new link checker.
+
+### Changed — `COMMANDES.txt` → `COMMANDES.md`
+- Converted to proper markdown (headings, tables, links). Renders on GitHub now, consistent with the other meta files. Content refreshed to reflect all 13 current prompts + the MASTER primer workflow.
+- References updated in README.md, LICENSE.md, stats.json, ROADMAP.md, prompts/README.md, prompts/PROMPT_MASTER.md.
+
+### Changed — Folder restructure (structure_version 2)
 
 ### Changed — Folder restructure (structure_version 2)
 - **Moved the 5 platform bibles into `bibles/` subfolder.** Was flat at root (`WEB.md`, `MOBILE.md`, `WEARABLE.md`, `XR.md`, `ICONS.md`); now nested (`bibles/WEB.md`, `bibles/MOBILE.md`, `bibles/WEARABLE.md`, `bibles/XR.md`, `bibles/ICONS.md`). Cleaner tree at root: 11 `.md` files → 7.

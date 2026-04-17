@@ -770,8 +770,8 @@ C'est la partie que la plupart des équipes ratent encore.
 
 - [MOBILE.md § CJ](MOBILE.md) — visionOS mobile-dev quick reference (Apple-only focus, complémentaire à cette bible XR cross-plateforme)
 - [WEARABLE.md § BX](WEARABLE.md) — AI assistants 2025 (Ray-Ban Meta brièvement mentionné, détails complets ici § L)
-- [VALUES.md](VALUES.md) — les valeurs canoniques générales (touch, spacing, contrast, timings) continuent de s'appliquer là où elles ne sont pas explicitement surchargées ici
-- [DESIGN_TREE.md](DESIGN_TREE.md) — index + arbre de décision
+- [VALUES.md](../VALUES.md) — les valeurs canoniques générales (touch, spacing, contrast, timings) continuent de s'appliquer là où elles ne sont pas explicitement surchargées ici
+- [DESIGN_TREE.md](../DESIGN_TREE.md) — index + arbre de décision
 
 ---
 
