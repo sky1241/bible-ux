@@ -46,6 +46,7 @@ The prompts in `prompts/` give you ready-made workflows: design audit from a scr
 | [WEB.md](WEB.md) | Web | 15,669 | 107 (A → CW) | CSS 2025, WCAG 2.2, PWA, Core Web Vitals, Popover API, View Transitions, WebNN, Privacy Sandbox |
 | [MOBILE.md](MOBILE.md) | iOS + Android | 15,508 | 105 (A → CZ) | HIG + Material 3, iOS 19 Liquid Glass, Apple Intelligence, Android 16 edge-to-edge, Material You Expressive, Passkeys, Baymard checkout |
 | [WEARABLE.md](WEARABLE.md) | Smartwatch | 13,132 | 76 (A → BX) | Wear OS 5, watchOS 12, OLED + round screens, complications, Sleep Apnea, Ultra 2 features, Gemini + Apple Intelligence on watch |
+| [XR.md](XR.md) | Headsets + Smart Glasses | ~870 | 14 (A → N) | Vision Pro, Meta Quest, Samsung Galaxy XR, Pico, Vive, Varjo, PSVR2, smart glasses (Ray-Ban Meta, XREAL, VITURE, Rokid, RayNeo, Halliday, Snap). Spatial UI, gaze+pinch, hand tracking, passthrough, motion sickness, OpenXR, WebXR, a11y XR |
 | [ICONS.md](ICONS.md) | All | 306 | 6 major (29 subsections) | Android adaptive, Apple templates, Play Store, A/B data (up to +25% conversion), CVD accessibility, 2026 trends |
 | [DESIGN_TREE.md](DESIGN_TREE.md) | All | 1,216 | index | Decision tree + ~510-entry cross-reference index across all bibles |
 | [VALUES.md](VALUES.md) | All | — | — | **Single source of truth** for every canonical number (touch, spacing, contrast, timing, breakpoints) |
@@ -56,6 +57,7 @@ The prompts in `prompts/` give you ready-made workflows: design audit from a scr
 bible-ux/
   WEB.md                          # Web UX bible (sections A → CW)
   MOBILE.md                       # Mobile UX bible (sections A → CZ)
+  XR.md                           # XR / spatial computing bible (sections A → N)
   WEARABLE.md                     # Wearable UX bible (sections A → BX)
   ICONS.md                        # App icon design bible (sections A → F)
   DESIGN_TREE.md                  # Cross-platform decision tree
@@ -130,21 +132,19 @@ For the canonical list of numeric values — touch targets, WCAG contrast, anima
 ## Stats
 
 ```
-Content lines:  45,831    (WEB + MOBILE + WEARABLE + DESIGN_TREE + ICONS)
-Repo lines:    ~49,500    (+ prompts, VALUES, meta files)
-Total sections: 317       (107 web + 105 mobile + 76 wearable + 29 icon)
+Content lines:  47,021    (WEB + MOBILE + WEARABLE + XR + DESIGN_TREE + ICONS + VALUES)
+Repo lines:    ~52,000    (+ prompts, meta files)
+Total sections: 331       (107 web + 105 mobile + 76 wearable + 14 XR + 29 icon)
 Total sources:   55+
-Platforms:       Web + iOS + Android + Wear OS + watchOS + Garmin Connect IQ
-Freshness:       2024–2026 (CSS 2025, iOS 19 Liquid Glass, Android 16, watchOS 12)
+Platforms:       Web + iOS + Android + Wear OS + watchOS + Garmin Connect IQ + Vision Pro + Meta Quest + Android XR + smart glasses
+Freshness:       2024–2026 (CSS 2025, iOS 19 Liquid Glass, Android 16, watchOS 12, visionOS 26, Horizon OS v77/v78, Android XR 2025, OpenXR 1.1)
 ```
 
 ## Versioning & roadmap
 
 See [CHANGELOG.md](CHANGELOG.md) for the full history. Current version: **1.0.0**.
 
-**Planned:**
-- `XR.md` — spatial computing + smart glasses bible (Vision Pro, Meta Quest, Android XR, Ray-Ban Meta, Xreal). Deep Research prompt already in [prompts/PROMPT_DEEP_RESEARCH_XR.md](prompts/PROMPT_DEEP_RESEARCH_XR.md).
-- Visual before/after examples gallery.
+**Planned:** see [ROADMAP.md](ROADMAP.md).
 
 ## License
 

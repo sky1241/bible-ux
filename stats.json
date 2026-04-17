@@ -1,22 +1,24 @@
 {
   "repo": "bible-ux",
-  "version": "1.1.0-unreleased",
+  "version": "1.2.0-unreleased",
   "last_updated": "2026-04-17",
   "phase": "STABLE",
-  "total_files": 30,
-  "content_lines": 46133,
+  "total_files": 31,
+  "content_lines": 47021,
   "content_files": {
     "WEB.md": 15669,
-    "MOBILE.md": 15508,
+    "MOBILE.md": 15510,
     "WEARABLE.md": 13132,
+    "XR.md": 842,
     "DESIGN_TREE.md": 1216,
     "ICONS.md": 306,
     "VALUES.md": 346
   },
   "meta_files": {
     "README.md": 162,
-    "CHANGELOG.md": 66,
+    "CHANGELOG.md": 80,
     "LICENSE.md": 94,
+    "ROADMAP.md": 66,
     "COMMANDES.txt": 142,
     "stats.json": "self"
   },
@@ -42,11 +44,12 @@
     "status": "awaiting_copyright_review",
     "index": "_sources/SOURCES.md"
   },
-  "sections_total": 317,
+  "sections_total": 331,
   "sections_by_bible": {
     "WEB.md": 107,
     "MOBILE.md": 105,
     "WEARABLE.md": 76,
+    "XR.md": 14,
     "ICONS.md": 29
   },
   "platforms": [
@@ -55,7 +58,11 @@
     "Android",
     "Wear OS",
     "watchOS",
-    "Garmin Connect IQ"
+    "Garmin Connect IQ",
+    "visionOS (Vision Pro)",
+    "Horizon OS (Meta Quest)",
+    "Android XR (Samsung Galaxy XR)",
+    "Smart glasses (Ray-Ban Meta, XREAL, VITURE, Rokid, RayNeo, Halliday, Snap Spectacles)"
   ],
   "license": "dual (MIT + commercial EULA)",
   "license_file": "LICENSE.md"

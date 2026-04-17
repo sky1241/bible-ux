@@ -5,9 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
-## [Unreleased] — Prompts routing + senior-dev cleanup
+## [Unreleased] — XR bible + prompts routing + senior-dev cleanup
 
-### Added
+### Added — XR / Spatial Computing
+- **`XR.md`** — new 4th platform bible (842 lines, 14 sections A → N, 54 subsections). Covers **Vision Pro**, **Meta Quest 3 / 3S**, **Samsung Galaxy XR**, **Pico 4**, **HTC Vive Focus Vision**, **Varjo XR-4**, **PlayStation VR2**, **Bigscreen Beyond 2**, **Shiftall MeganeX**, and smart glasses (**Ray-Ban Meta**, **XREAL Air/One/Beam**, **VITURE Luma Pro**, **Rokid Max 2**, **RayNeo X3 Pro**, **Halliday**, **Snap Spectacles 5**). Sections cover hardware baselines, spatial UI metrics (angular sizing, FOV safe zones, reading geometry), input (gaze+pinch / hand tracking / ray / voice / controllers / text entry), locomotion and motion sickness, passthrough + anchors + persistence, spatial audio APIs, performance (frame rate floors, GPU budgets), privacy (eye data, biometrics, spatial data permissions, child safety), accessibility XR, frameworks (visionOS, Meta Presence Platform, Android XR, WebXR, OpenXR 1.1), prototyping without hardware, smart glasses specifics, strategic answers (best indie platform 2026, emerging cross-platform conventions, FOV for immersion, visionOS vs Horizon OS divergences, glasses-vs-headset horizon 2028), valeurs clés memo. Sourced from ChatGPT Deep Research baseline 2026-04-17 with **76 primary citations** (Apple HIG, Meta dev docs, Android XR docs, Samsung, Sony, Khronos, CHI/arXiv papers, vendor product pages).
+- Cross-reference added in [MOBILE.md § CJ](MOBILE.md) pointing to XR.md as the full cross-platform source.
+- [ROADMAP.md](ROADMAP.md) — new file documenting planned work, priority-ordered.
+
+### Added — Prompts routing + infra
 - `prompts/README.md` — **routing guide** (ASCII flowchart + situation→prompt table). Solves "which prompt do I use when?" problem.
 - `prompts/PROMPT_MASTER.md` — **context primer** to paste at the start of a new Claude/GPT session. Auto-routes to other prompts via verbal triggers. Establishes strict reference hierarchy (VALUES > bibles > DESIGN_TREE > prompts).
 - `.gitignore` — standard ignore (OS files, editors, env, local-only drafts, large binaries).
@@ -28,7 +33,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - `TODO_MONETISATION.txt` **removed from public repo** (was leaking the author's business plan to potential buyers). File is preserved locally on the author's machine and now listed in `.gitignore`.
 
 ### Fixed
-- README.md stats reconciled: `ICONS 307 → 306 lines`, sections clarified (`29 → 6 major / 29 subsections`), total content lines `45,888 → 45,831` → **46,133** (with VALUES.md added).
+- README.md stats reconciled: `ICONS 307 → 306 lines`, sections clarified (`29 → 6 major / 29 subsections`), total content lines `45,888 → 47,021` (new totals after VALUES.md + XR.md additions).
 
 ---
 

@@ -12151,6 +12151,8 @@ Users expect apps to behave like native apps on their platform. Cross-platform f
 
 ## CJ. visionOS & Spatial Computing UX
 
+> **Cross-reference** : this section is a **mobile-dev quick reference** focused on Apple visionOS only. For the full cross-platform XR bible (Vision Pro, Meta Quest, Samsung Galaxy XR, Pico, Vive, Varjo, PSVR2, smart glasses Ray-Ban/XREAL/Halliday, OpenXR, WebXR, Android XR), see [`XR.md`](XR.md).
+
 ### Input Model
 
 visionOS uses indirect interaction as the primary input: the user looks at a target (eye tracking) and taps their fingers together (hand gesture) to select. This fundamentally changes UI design from touch-based mobile.
