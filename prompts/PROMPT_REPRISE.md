@@ -42,7 +42,7 @@ Tu es en mode **"je te donne, tu décides"**. L'user est fatigué, il veut :
 
 1. **Lire** `bible-ux/DESIGN_TREE.md` (identifier la phase 0-7 applicable)
 2. **Consulter `VALUES.md`** pour les valeurs canoniques (touch, spacing, contraste, timings)
-3. **Grep** dans les bibles pertinentes (`WEB.md`, `MOBILE.md`, `WEARABLE.md`) par keywords
+3. **Grep** dans les bibles pertinentes (`bibles/WEB.md`, `bibles/MOBILE.md`, `bibles/WEARABLE.md`) par keywords
 4. **Lire** le code concerné dans le projet
 5. **Proposer** avec ce format :
 
@@ -89,8 +89,8 @@ Pour etre creatif et pas juste mecanique, tu lis et tu melanges les deux bibles 
 
 | Fichier | Ce qu'on en tire | Pourquoi croiser |
 |---------|------------------|------------------|
-| `WEB.md` | WCAG, patterns, accessibilite | Les bases solides |
-| `MOBILE.md` | iOS HIG, Material 3, valeurs precises, feeling tactile | Valeurs plus strictes, UX plus premium |
+| `bibles/WEB.md` | WCAG, patterns, accessibilite | Les bases solides |
+| `bibles/MOBILE.md` | iOS HIG, Material 3, valeurs precises, feeling tactile | Valeurs plus strictes, UX plus premium |
 
 **Le secret :** appliquer les standards MOBILE au WEB = meilleur resultat
 

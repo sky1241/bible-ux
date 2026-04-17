@@ -1,9 +1,9 @@
 # DEEP RESEARCH PROMPT - UX XR / SPATIAL COMPUTING / SMART GLASSES (~150 pages cible)
 
 ## WHEN
-- Tu veux construire la future `XR.md` (Vision Pro, Meta Quest, Android XR, WebXR, smart glasses)
+- Tu veux construire la future `bibles/XR.md` (Vision Pro, Meta Quest, Android XR, WebXR, smart glasses)
 - Usage : **copier-coller TOUT ce fichier dans ChatGPT Deep Research**
-- Puis utiliser `PROMPT_INTEGRATION_DEEP_RESEARCH.md` (adapter le target file à `XR.md`)
+- Puis utiliser `PROMPT_INTEGRATION_DEEP_RESEARCH.md` (adapter le target file à `bibles/XR.md`)
 
 ## WHEN NOT
 - Wearable montre → `PROMPT_DEEP_RESEARCH_WEARABLE.md`
@@ -1008,4 +1008,4 @@ En conclusion, l'etude doit adresser :
 
 ---
 
-**Livrable attendu :** document markdown structure, valeurs chiffrees exhaustives, tableaux comparatifs, checklists, exemples, sources, prepare pour etre integre dans `bible-ux/XR.md` en suivant le meme format que `WEB.md`, `MOBILE.md`, `WEARABLE.md`.
+**Livrable attendu :** document markdown structure, valeurs chiffrees exhaustives, tableaux comparatifs, checklists, exemples, sources, prepare pour etre integre dans `bible-ux/XR.md` en suivant le meme format que `bibles/WEB.md`, `bibles/MOBILE.md`, `bibles/WEARABLE.md`.

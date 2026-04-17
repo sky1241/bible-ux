@@ -1,17 +1,18 @@
 {
   "repo": "bible-ux",
-  "version": "1.4.0-unreleased",
+  "version": "1.5.0-unreleased",
   "last_updated": "2026-04-17",
   "phase": "STABLE",
   "total_files": 36,
   "content_lines": 47021,
+  "structure_version": 2,
   "content_files": {
-    "WEB.md": 15669,
-    "MOBILE.md": 15510,
-    "WEARABLE.md": 13132,
-    "XR.md": 842,
+    "bibles/WEB.md": 15669,
+    "bibles/MOBILE.md": 15510,
+    "bibles/WEARABLE.md": 13132,
+    "bibles/XR.md": 842,
+    "bibles/ICONS.md": 306,
     "DESIGN_TREE.md": 1216,
-    "ICONS.md": 306,
     "VALUES.md": 346
   },
   "meta_files": {
@@ -51,11 +52,11 @@
   },
   "sections_total": 331,
   "sections_by_bible": {
-    "WEB.md": 107,
-    "MOBILE.md": 105,
-    "WEARABLE.md": 76,
-    "XR.md": 14,
-    "ICONS.md": 29
+    "bibles/WEB.md": 107,
+    "bibles/MOBILE.md": 105,
+    "bibles/WEARABLE.md": 76,
+    "bibles/XR.md": 14,
+    "bibles/ICONS.md": 29
   },
   "platforms": [
     "Web",

@@ -5,9 +5,9 @@ This repository uses a **dual license** structure:
 | Part of the repo | License | Use |
 |------------------|---------|-----|
 | `prompts/**`, `DESIGN_TREE.md`, `VALUES.md`, `COMMANDES.txt`, `README*.md`, `CHANGELOG.md`, `ROADMAP.md`, `stats.json`, `.gitignore` | **MIT** (see below) | Free to use, fork, modify, redistribute. |
-| `WEB.md`, `MOBILE.md`, `WEARABLE.md`, `XR.md`, `ICONS.md`, `_sources/**` | **Commercial EULA** (see below) | Personal use only. No redistribution. Paid licenses available. |
+| `bibles/WEB.md`, `bibles/MOBILE.md`, `bibles/WEARABLE.md`, `bibles/XR.md`, `bibles/ICONS.md`, `_sources/**` | **Commercial EULA** (see below) | Personal use only. No redistribution. Paid licenses available. |
 
-The bibles (`WEB.md`, `MOBILE.md`, `WEARABLE.md`, `XR.md`, `ICONS.md`) and the source PDFs are the commercial product. Everything else (prompts, workflow files, index) is free and meant to be copied.
+The bibles (`bibles/WEB.md`, `bibles/MOBILE.md`, `bibles/WEARABLE.md`, `bibles/XR.md`, `bibles/ICONS.md`) and the source PDFs are the commercial product. Everything else (prompts, workflow files, index) is free and meant to be copied.
 
 ---
 
@@ -37,7 +37,7 @@ THE SOFTWARE.
 
 ## Part B — Commercial EULA (UX bibles and sources)
 
-**Scope.** This EULA covers `WEB.md`, `MOBILE.md`, `WEARABLE.md`, `XR.md`, `ICONS.md`, and the files under `_sources/`. It does **not** cover the files licensed under the MIT section above.
+**Scope.** This EULA covers `bibles/WEB.md`, `bibles/MOBILE.md`, `bibles/WEARABLE.md`, `bibles/XR.md`, `bibles/ICONS.md`, and the files under `_sources/`. It does **not** cover the files licensed under the MIT section above.
 
 **Grant (personal license).** You are granted a non-exclusive, non-transferable, revocable license to:
 - Read, reference, and consult the files on devices you own or control

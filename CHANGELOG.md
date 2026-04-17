@@ -5,7 +5,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
-## [Unreleased] — Prompt system v1.4 (pick-pattern, spec, code-review, vision) + tokens export + XR bible + routing + cleanup
+## [Unreleased] — Folder restructure + prompt system v1.4 + tokens export + XR bible + routing + cleanup
+
+### Changed — Folder restructure (structure_version 2)
+- **Moved the 5 platform bibles into `bibles/` subfolder.** Was flat at root (`WEB.md`, `MOBILE.md`, `WEARABLE.md`, `XR.md`, `ICONS.md`); now nested (`bibles/WEB.md`, `bibles/MOBILE.md`, `bibles/WEARABLE.md`, `bibles/XR.md`, `bibles/ICONS.md`). Cleaner tree at root: 11 `.md` files → 7.
+- **Meta + navigation files stay at root**: `README.md`, `CHANGELOG.md`, `LICENSE.md`, `ROADMAP.md`, `COMMANDES.txt`, `stats.json`, `.gitignore`, `DESIGN_TREE.md`, `VALUES.md`.
+- **116 cross-references updated across 18 files** (markdown links `](WEB.md)` → `](bibles/WEB.md)`, backtick quoted paths `` `WEB.md` `` → `` `bibles/WEB.md` ``, from-prompts paths `](WEB.md)` → `](../bibles/WEB.md)`).
+- **Inter-bible refs stay short** (`[MOBILE.md § CJ](MOBILE.md)` inside `bibles/XR.md`) since all bibles are in the same folder.
+- **stats.json bumped `structure_version: 2`** and all `content_files` / `sections_by_bible` keys updated to the new paths.
+- **README.md architecture tree** rewritten to show the new structure with the extra prompts (MASTER, PICK_PATTERN, SPEC_FROM_SCRATCH, CODE_REVIEW, TOKENS_EXPORT, VISION) listed.
+- **LICENSE.md scope** updated: the EULA scope list now reads `bibles/WEB.md`, `bibles/MOBILE.md`, etc.
+- Zero broken links after the move (verified by grep: no naked bible refs remaining outside the `bibles/` prefix).
+
+
 
 ### Added — 3 new workflow prompts + vision document
 - **`prompts/PROMPT_PICK_PATTERN.md`** (179 lines) — "I have X → which pattern?". 8 decision tables (navigation, overlay, list/table, form, feedback, onboarding, loading/empty/error, XR-specific). Max 2 recommendations + 1 anti-pattern per case. Claude routes to MASTER for implementation on "go". Trigger verbs: "quel pattern", "quelle nav", "tab ou drawer".
@@ -20,8 +32,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 
 ### Added — XR / Spatial Computing
-- **`XR.md`** — new 4th platform bible (842 lines, 14 sections A → N, 54 subsections). Covers **Vision Pro**, **Meta Quest 3 / 3S**, **Samsung Galaxy XR**, **Pico 4**, **HTC Vive Focus Vision**, **Varjo XR-4**, **PlayStation VR2**, **Bigscreen Beyond 2**, **Shiftall MeganeX**, and smart glasses (**Ray-Ban Meta**, **XREAL Air/One/Beam**, **VITURE Luma Pro**, **Rokid Max 2**, **RayNeo X3 Pro**, **Halliday**, **Snap Spectacles 5**). Sections cover hardware baselines, spatial UI metrics (angular sizing, FOV safe zones, reading geometry), input (gaze+pinch / hand tracking / ray / voice / controllers / text entry), locomotion and motion sickness, passthrough + anchors + persistence, spatial audio APIs, performance (frame rate floors, GPU budgets), privacy (eye data, biometrics, spatial data permissions, child safety), accessibility XR, frameworks (visionOS, Meta Presence Platform, Android XR, WebXR, OpenXR 1.1), prototyping without hardware, smart glasses specifics, strategic answers (best indie platform 2026, emerging cross-platform conventions, FOV for immersion, visionOS vs Horizon OS divergences, glasses-vs-headset horizon 2028), valeurs clés memo. Sourced from ChatGPT Deep Research baseline 2026-04-17 with **76 primary citations** (Apple HIG, Meta dev docs, Android XR docs, Samsung, Sony, Khronos, CHI/arXiv papers, vendor product pages).
-- Cross-reference added in [MOBILE.md § CJ](MOBILE.md) pointing to XR.md as the full cross-platform source.
+- **`bibles/XR.md`** — new 4th platform bible (842 lines, 14 sections A → N, 54 subsections). Covers **Vision Pro**, **Meta Quest 3 / 3S**, **Samsung Galaxy XR**, **Pico 4**, **HTC Vive Focus Vision**, **Varjo XR-4**, **PlayStation VR2**, **Bigscreen Beyond 2**, **Shiftall MeganeX**, and smart glasses (**Ray-Ban Meta**, **XREAL Air/One/Beam**, **VITURE Luma Pro**, **Rokid Max 2**, **RayNeo X3 Pro**, **Halliday**, **Snap Spectacles 5**). Sections cover hardware baselines, spatial UI metrics (angular sizing, FOV safe zones, reading geometry), input (gaze+pinch / hand tracking / ray / voice / controllers / text entry), locomotion and motion sickness, passthrough + anchors + persistence, spatial audio APIs, performance (frame rate floors, GPU budgets), privacy (eye data, biometrics, spatial data permissions, child safety), accessibility XR, frameworks (visionOS, Meta Presence Platform, Android XR, WebXR, OpenXR 1.1), prototyping without hardware, smart glasses specifics, strategic answers (best indie platform 2026, emerging cross-platform conventions, FOV for immersion, visionOS vs Horizon OS divergences, glasses-vs-headset horizon 2028), valeurs clés memo. Sourced from ChatGPT Deep Research baseline 2026-04-17 with **76 primary citations** (Apple HIG, Meta dev docs, Android XR docs, Samsung, Sony, Khronos, CHI/arXiv papers, vendor product pages).
+- Cross-reference added in [MOBILE.md § CJ](bibles/MOBILE.md) pointing to XR.md as the full cross-platform source.
 - [ROADMAP.md](ROADMAP.md) — new file documenting planned work, priority-ordered.
 
 ### Added — Prompts routing + infra

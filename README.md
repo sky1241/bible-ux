@@ -43,11 +43,11 @@ The prompts in `prompts/` give you ready-made workflows: design audit from a scr
 
 | File | Platform | Lines | Sections | What's inside |
 |------|----------|------:|----------|---------------|
-| [WEB.md](WEB.md) | Web | 15,669 | 107 (A → CW) | CSS 2025, WCAG 2.2, PWA, Core Web Vitals, Popover API, View Transitions, WebNN, Privacy Sandbox |
-| [MOBILE.md](MOBILE.md) | iOS + Android | 15,508 | 105 (A → CZ) | HIG + Material 3, iOS 19 Liquid Glass, Apple Intelligence, Android 16 edge-to-edge, Material You Expressive, Passkeys, Baymard checkout |
-| [WEARABLE.md](WEARABLE.md) | Smartwatch | 13,132 | 76 (A → BX) | Wear OS 5, watchOS 12, OLED + round screens, complications, Sleep Apnea, Ultra 2 features, Gemini + Apple Intelligence on watch |
-| [XR.md](XR.md) | Headsets + Smart Glasses | ~870 | 14 (A → N) | Vision Pro, Meta Quest, Samsung Galaxy XR, Pico, Vive, Varjo, PSVR2, smart glasses (Ray-Ban Meta, XREAL, VITURE, Rokid, RayNeo, Halliday, Snap). Spatial UI, gaze+pinch, hand tracking, passthrough, motion sickness, OpenXR, WebXR, a11y XR |
-| [ICONS.md](ICONS.md) | All | 306 | 6 major (29 subsections) | Android adaptive, Apple templates, Play Store, A/B data (up to +25% conversion), CVD accessibility, 2026 trends |
+| [WEB.md](bibles/WEB.md) | Web | 15,669 | 107 (A → CW) | CSS 2025, WCAG 2.2, PWA, Core Web Vitals, Popover API, View Transitions, WebNN, Privacy Sandbox |
+| [MOBILE.md](bibles/MOBILE.md) | iOS + Android | 15,508 | 105 (A → CZ) | HIG + Material 3, iOS 19 Liquid Glass, Apple Intelligence, Android 16 edge-to-edge, Material You Expressive, Passkeys, Baymard checkout |
+| [WEARABLE.md](bibles/WEARABLE.md) | Smartwatch | 13,132 | 76 (A → BX) | Wear OS 5, watchOS 12, OLED + round screens, complications, Sleep Apnea, Ultra 2 features, Gemini + Apple Intelligence on watch |
+| [XR.md](bibles/XR.md) | Headsets + Smart Glasses | ~870 | 14 (A → N) | Vision Pro, Meta Quest, Samsung Galaxy XR, Pico, Vive, Varjo, PSVR2, smart glasses (Ray-Ban Meta, XREAL, VITURE, Rokid, RayNeo, Halliday, Snap). Spatial UI, gaze+pinch, hand tracking, passthrough, motion sickness, OpenXR, WebXR, a11y XR |
+| [ICONS.md](bibles/ICONS.md) | All | 306 | 6 major (29 subsections) | Android adaptive, Apple templates, Play Store, A/B data (up to +25% conversion), CVD accessibility, 2026 trends |
 | [DESIGN_TREE.md](DESIGN_TREE.md) | All | 1,216 | index | Decision tree + ~510-entry cross-reference index across all bibles |
 | [VALUES.md](VALUES.md) | All | — | — | **Single source of truth** for every canonical number (touch, spacing, contrast, timing, breakpoints) |
 
@@ -55,33 +55,45 @@ The prompts in `prompts/` give you ready-made workflows: design audit from a scr
 
 ```
 bible-ux/
-  WEB.md                          # Web UX bible (sections A → CW)
-  MOBILE.md                       # Mobile UX bible (sections A → CZ)
-  XR.md                           # XR / spatial computing bible (sections A → N)
-  WEARABLE.md                     # Wearable UX bible (sections A → BX)
-  ICONS.md                        # App icon design bible (sections A → F)
-  DESIGN_TREE.md                  # Cross-platform decision tree
+  bibles/                         # The 5 platform bibles (commercial EULA)
+    WEB.md                        #   Web UX bible (sections A → CW, 15669 lines)
+    MOBILE.md                     #   Mobile UX bible (sections A → CZ, 15510 lines)
+    WEARABLE.md                   #   Wearable UX bible (sections A → BX, 13132 lines)
+    XR.md                         #   XR / spatial computing (sections A → N, 842 lines)
+    ICONS.md                      #   App icon design (sections A → F, 306 lines)
+
+  DESIGN_TREE.md                  # Cross-platform decision tree + index
   VALUES.md                       # Canonical numeric source of truth
-  CHANGELOG.md                    # Version history
-  LICENSE.md                      # Dual license (MIT + commercial EULA)
 
   prompts/                        # AI workflow prompts (all MIT)
-    PROMPT_DESIGN_AUDIT.md        #   Screenshot → pro design critique (7 sins + 12 axes)
+    README.md                     #   Router — start here if you're lost
+    VISION.md                     #   Prompt system v2.0 roadmap
+    PROMPT_MASTER.md              #   Context primer (paste once at session start)
+    PROMPT_DESIGN_AUDIT.md        #   Screenshot → pro design critique
     PROMPT_CSSFIX.md              #   Labelled-zones CSS fix workflow
+    PROMPT_TOKENS_EXPORT.md       #   VALUES.md → CSS / Tailwind / Flutter / ...
+    PROMPT_PICK_PATTERN.md        #   "I have X → which pattern?"
+    PROMPT_SPEC_FROM_SCRATCH.md   #   Describe app → full spec
+    PROMPT_CODE_REVIEW.md         #   Review diff / PR with P0/P1/P2/P3
     PROMPT_REPRISE.md             #   Autonomous / fatigue-mode resume
-    PROMPT_INTEGRATION_DEEP_RESEARCH.md  # Integrate DR results without duplicates
+    PROMPT_INTEGRATION_DEEP_RESEARCH.md  # Integrate DR results
     PROMPT_DEEP_RESEARCH_MASSIVE.md      # Universal UX DR (~100 pages)
     PROMPT_DEEP_RESEARCH_WEARABLE.md     # Smartwatch DR (~170 pages)
-    PROMPT_DEEP_RESEARCH_XR.md           # Spatial computing + smart glasses DR (~150 pages)
+    PROMPT_DEEP_RESEARCH_XR.md           # Spatial computing DR (~150 pages)
     PROMPT_TEST_CREATIF.md        #   Creative mode (bypass rule-citation)
 
-  _sources/                       # Raw research PDFs (2024–2026)
+  _sources/                       # Raw research PDFs (copyright audit pending)
+    SOURCES.md                    #   Inventory + copyright status
     01_spacing.pdf  02_colors.pdf  03_wcag_rules.pdf
     04_patterns_2024.pdf  05_patterns_2026.pdf
     06_mobile_values.pdf  07_premium_feel.pdf
 
+  README.md                       # This file
+  CHANGELOG.md                    # Version history (Keep a Changelog)
+  LICENSE.md                      # Dual license (MIT + commercial EULA)
+  ROADMAP.md                      # Planned work, priority-ordered
   COMMANDES.txt                   # French command cheat-sheet
-  stats.json                      # Repo metadata snapshot (auto-updated)
+  stats.json                      # Repo metadata snapshot
   .gitignore
 ```
 
@@ -153,7 +165,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the full history. Current version: **1.0.0*
 | Part | License | Summary |
 |------|---------|---------|
 | `prompts/**`, `DESIGN_TREE.md`, `VALUES.md`, `COMMANDES.txt`, `README*.md`, `CHANGELOG.md`, `stats.json` | **MIT** | Free to use, fork, modify, redistribute. |
-| `WEB.md`, `MOBILE.md`, `WEARABLE.md`, `ICONS.md`, `_sources/**` | **Commercial EULA** | Personal use only. No redistribution. Paid licenses available. |
+| `bibles/WEB.md`, `bibles/MOBILE.md`, `bibles/WEARABLE.md`, `bibles/ICONS.md`, `_sources/**` | **Commercial EULA** | Personal use only. No redistribution. Paid licenses available. |
 
 Commercial licenses available on request (open a GitHub issue or email the author).
 

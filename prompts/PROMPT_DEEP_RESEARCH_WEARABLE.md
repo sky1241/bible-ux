@@ -1,7 +1,7 @@
 # DEEP RESEARCH PROMPT - UX WEARABLE / SMARTWATCH (~170 pages cible)
 
 ## WHEN
-- Tu veux enrichir `WEARABLE.md` sur un sujet smartwatch spécifique (Wear OS, watchOS, Fitbit, Garmin)
+- Tu veux enrichir `bibles/WEARABLE.md` sur un sujet smartwatch spécifique (Wear OS, watchOS, Fitbit, Garmin)
 - Usage : **copier-coller TOUT ce fichier dans ChatGPT Deep Research**
 - Puis utiliser `PROMPT_INTEGRATION_DEEP_RESEARCH.md`
 
