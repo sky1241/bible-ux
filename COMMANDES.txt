@@ -43,19 +43,7 @@ COMMENT UTILISER:
 
 --------------------------------------------
 
-3. MODE CALENDRIER
-   Fichier: prompts/PROMPT_CALENDRIER_CREATIF.md
-
-   QUAND: Modifier le calendrier specifiquement
-
-   COMMENT:
-   - Dis "Mode calendrier"
-   - Claude charge les regles + le CSS du calendrier
-   - Tu demandes ce que tu veux
-
---------------------------------------------
-
-4. MODE INTEGRATION DEEP RESEARCH
+3. MODE INTEGRATION DEEP RESEARCH
    Fichier: prompts/PROMPT_INTEGRATION_DEEP_RESEARCH.md
 
    QUAND: Tu recois les resultats de ChatGPT Deep Research
@@ -78,7 +66,7 @@ COMMENT UTILISER:
 
 --------------------------------------------
 
-5. PROMPT DEEP RESEARCH MASSIVE
+4. PROMPT DEEP RESEARCH MASSIVE
    Fichier: prompts/PROMPT_DEEP_RESEARCH_MASSIVE.md
 
    QUAND: Tu veux lancer une nouvelle Deep Research (~100 pages)
@@ -132,19 +120,23 @@ RACCOURCIS RAPIDES (utilisables a tout moment):
 
 STRUCTURE DES FICHIERS:
 
-c:\Users\ludov\.infernal_wheel\
-  ux_resources\
-    DESIGN_TREE.md        <- Arbre decision
-    WEB.md                <- Regles web
-    MOBILE.md             <- Regles mobile
+c:\Users\ludov\bible-ux\
+    DESIGN_TREE.md        <- Arbre de decision (lire EN PREMIER)
+    WEB.md                <- ~107 sections web (A -> CW)
+    MOBILE.md             <- ~105 sections mobile (A -> CZ)
+    WEARABLE.md           <- ~76 sections wearable (A -> BX)
+    ICONS.md              <- Icones app (A -> F)
     COMMANDES.txt         <- CE FICHIER
     prompts\
-      PROMPT_REPRISE.md   <- Mode reprise + autonome
-      PROMPT_CSSFIX.md    <- Mode CSS fix
-      PROMPT_CALENDRIER_CREATIF.md <- Mode calendrier
-      PROMPT_INTEGRATION_DEEP_RESEARCH.md <- Integration resultats
-      PROMPT_DEEP_RESEARCH_MASSIVE.md <- Prompt pour ChatGPT (~100 pages)
+      PROMPT_REPRISE.md                   <- Mode reprise + autonome
+      PROMPT_CSSFIX.md                    <- Mode CSS fix
+      PROMPT_DESIGN_AUDIT.md              <- Audit 7 peches + 12 axes
+      PROMPT_INTEGRATION_DEEP_RESEARCH.md <- Integration resultats DR
+      PROMPT_DEEP_RESEARCH_MASSIVE.md     <- Prompt DR universel
+      PROMPT_DEEP_RESEARCH_WEARABLE.md    <- Prompt DR smartwatch
+      PROMPT_TEST_CREATIF.md              <- Mode creatif
+    _sources\               <- 7 PDF de recherche (2024-2026)
 
 ============================================
-Derniere mise a jour: 2026-02-09
+Derniere mise a jour: 2026-04-17
 ============================================

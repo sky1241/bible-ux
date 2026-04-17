@@ -20,7 +20,7 @@ git clone https://github.com/sky1241/bible-ux.git ux_resources
 | [WEB.md](WEB.md) | Web | 15,669 | 107 | CSS, WCAG 2.2, accessibility, patterns, responsive |
 | [MOBILE.md](MOBILE.md) | iOS + Android | 15,508 | 105 | Material 3, HIG, touch targets, navigation, gestures |
 | [WEARABLE.md](WEARABLE.md) | Smartwatch | 13,132 | 76 | Wear OS, watchOS, OLED, round screens, complications |
-| [ICONS.md](ICONS.md) | All | 307 | 29 | Adaptive icons, color psychology, A/B testing, Play Store |
+| [ICONS.md](ICONS.md) | All | 306 | 6 (29 subsections) | Adaptive icons, color psychology, A/B testing, Play Store |
 | [DESIGN_TREE.md](DESIGN_TREE.md) | All | 1,216 | — | Decision tree + cross-reference index across all bibles |
 
 ## Architecture
@@ -87,11 +87,12 @@ Find what you need fast:
 ## Stats
 
 ```
-Total lines:    45,888
-Total sections: 317
+Content lines:  45,831   (WEB + MOBILE + WEARABLE + DESIGN_TREE + ICONS)
+Repo lines:    ~49,500   (+ prompts, meta files)
+Total sections: 317      (107 + 105 + 76 + 29)
 Total sources:  55+
 Platforms:      Web + iOS + Android + Wear OS + watchOS + Garmin
-Freshness:      2024-2026 (CSS 2025, Android 16, watchOS 12)
+Freshness:      2024-2026 (CSS 2025, iOS 19 Liquid Glass, Android 16, watchOS 12)
 ```
 
 ## License
