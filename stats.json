@@ -1,9 +1,9 @@
 {
   "repo": "bible-ux",
   "version": "1.9.0-unreleased",
-  "last_updated": "2026-04-17",
+  "last_updated": "2026-04-18",
   "phase": "STABLE",
-  "total_files": 59,
+  "total_files": 60,
   "content_lines": 47021,
   "structure_version": 2,
   "content_files": {
@@ -16,7 +16,7 @@
     "VALUES.md": 346
   },
   "meta_files": {
-    "README.md": 177,
+    "README.md": 183,
     "CHANGELOG.md": 179,
     "LICENSE.md": 94,
     "ROADMAP.md": 98,
