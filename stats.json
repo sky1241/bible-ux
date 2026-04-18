@@ -3,7 +3,7 @@
   "version": "1.9.0-unreleased",
   "last_updated": "2026-04-18",
   "phase": "STABLE",
-  "total_files": 61,
+  "total_files": 62,
   "content_lines": 47021,
   "structure_version": 2,
   "content_files": {
@@ -16,7 +16,7 @@
     "VALUES.md": 346
   },
   "meta_files": {
-    "README.md": 183,
+    "README.md": 186,
     "CHANGELOG.md": 179,
     "LICENSE.md": 94,
     "ROADMAP.md": 98,

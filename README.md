@@ -13,9 +13,12 @@
 
 ---
 
-## 🟢 First time here? → [START_HERE.md](START_HERE.md)
+## 🟢 First time here?
 
-**30-second version :** in your Claude / ChatGPT / Gemini session, say **"use bible-ux for the design"** — done. The AI consults the rules automatically. [Full quickstart →](START_HERE.md)
+- **30 seconds** → [START_HERE.md](START_HERE.md) — the one phrase to remember
+- **5 minutes** → [USER_GUIDE.md](USER_GUIDE.md) — full walkthrough with 15 shortcuts, 3 example scenarios, troubleshooting, FAQ
+
+**TL;DR :** in your Claude / ChatGPT / Gemini session, say **"use bible-ux for the design"** or paste a screenshot with **"c'est moche"**. The AI consults the rules automatically.
 
 ---
 
