@@ -13,6 +13,12 @@
 
 ---
 
+## 🟢 First time here? → [START_HERE.md](START_HERE.md)
+
+**30-second version :** in your Claude / ChatGPT / Gemini session, say **"use bible-ux for the design"** — done. The AI consults the rules automatically. [Full quickstart →](START_HERE.md)
+
+---
+
 ## Why this exists
 
 When you ask an AI assistant to design a button, it gives you a button. When you ask it to design a button **with the bible-ux dropped in**, it gives you:
